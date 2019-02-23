@@ -1,32 +1,23 @@
-<!doctype html>
-<html lang="en">
-<head><meta name="generator" content="Hexo 3.8.0">
-<meta charset="utf-8">
-<title>about - Hexo</title>
-<base href="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://yoursite.com/about/">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="translucent">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
-<meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
-<meta property="og:updated_time" content="2019-02-22T16:37:43.044Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
-<link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
-<link rel="stylesheet" href="/styles.942c2aa7be6bc74cfb59.css">
-<link rel="stylesheet" href="/theme.79d0cb0b7f53a2ae2dbb.css">
-<script src="/config.26cd97da59e0b826b7c2.js"></script>
-</head>
-<body>
-<is-d2a57d></is-d2a57d>
-<script src="/runtime.a5dd35324ddfd942bef1.js"></script>
-<script src="/polyfills.bd3fb034406e30e3b5dc.js"></script>
-<script src="/main.8f14c2dee0d43c5f5861.en.js"></script></body>
-</html>
+extends includes/layout
+
+block content
+    article#page
+        if page.type === 'tags'
+            .tag-cloud
+                .tag-cloud-title= _p('menu.tags')
+                span.tag-cloud-line -
+                span.tag-cloud-amount= site.tags.length
+                .tag-cloud-tags!= tagcloud({min_font: 12,max_font: 30,amount: 200,color: true,start_color: '#A4D8FA',end_color: '#0790E8'})
+        else if page.type === 'categories'
+            .category-lists
+                .category-title= _p('page.categories')
+                span.category-line -
+                span.category-amount= site.categories.length
+                div!= list_categories()
+            //.categories!= page.content
+        else
+            article.page
+                h1= _p('menu.' + page.title)
+                .about!= page.content
+            include includes/pagination
+        //div!= paginator()
