@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="Java、IT">
+  <meta name="description" content="Error与Exception的区别 同 1:两者都继承自Throwable  不同Exception 1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类);         注:可控不可控就看在代码编写时能否检测到异常;2: 表示有一个程序员导致的错误;3: 应该在应用级被处理;  Error 1: 总是不可控的（即在编译期不可探测到异常;2: 常用来表示系统错误;">
+<meta name="keywords" content="java,异常">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/02/22/hello-world/index.html">
+<meta property="og:title" content="error 与 exception的区别">
+<meta property="og:url" content="http://yoursite.com/2019/02/24/error-与-exception的区别/index.html">
 <meta property="og:site_name" content="Wu">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Error与Exception的区别 同 1:两者都继承自Throwable  不同Exception 1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类);         注:可控不可控就看在代码编写时能否检测到异常;2: 表示有一个程序员导致的错误;3: 应该在应用级被处理;  Error 1: 总是不可控的（即在编译期不可探测到异常;2: 常用来表示系统错误;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-22T13:58:33.494Z">
+<meta property="og:updated_time" content="2019-02-24T05:14:57.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="error 与 exception的区别">
+<meta name="twitter:description" content="Error与Exception的区别 同 1:两者都继承自Throwable  不同Exception 1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类);         注:可控不可控就看在代码编写时能否检测到异常;2: 表示有一个程序员导致的错误;3: 应该在应用级被处理;  Error 1: 总是不可控的（即在编译期不可探测到异常;2: 常用来表示系统错误;">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/22/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/24/error-与-exception的区别/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>Hello World | Wu</title>
+  <title>error 与 exception的区别 | Wu</title>
   
 
 
@@ -241,7 +241,7 @@
       
     
 
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">1</span></a>
 
   </li>
         
@@ -260,7 +260,7 @@
       
     
 
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">0</span></a>
+    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">1</span></a>
 
   </li>
         
@@ -279,7 +279,7 @@
       
     
 
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">1</span></a>
+    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">2</span></a>
 
   </li>
         
@@ -350,7 +350,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/22/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/error-与-exception的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tony">
@@ -367,7 +367,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">error 与 exception的区别
 
               
             
@@ -393,12 +393,34 @@
                 
               
 
-              <time title="创建时间：2019-02-22 21:58:33" itemprop="dateCreated datePublished" datetime="2019-02-22T21:58:33+08:00">2019-02-22</time>
+              <time title="创建时间：2019-02-24 12:45:27 / 修改时间：13:14:57" itemprop="dateCreated datePublished" datetime="2019-02-24T12:45:27+08:00">2019-02-24</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/面试/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -428,15 +450,16 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="Error与Exception的区别"><a href="#Error与Exception的区别" class="headerlink" title="Error与Exception的区别"></a><center>Error与Exception的区别</center></h1><hr>
+<h2 id="同"><a href="#同" class="headerlink" title="同"></a>同</h2><blockquote>
+<p>1:两者都继承自Throwable</p>
+</blockquote>
+<h2 id="不同"><a href="#不同" class="headerlink" title="不同"></a>不同</h2><h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><blockquote>
+<p>1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类);<br>         注:可控不可控就看在代码编写时能否检测到异常;<br>2: 表示有一个程序员导致的错误;<br>3: 应该在应用级被处理;</p>
+</blockquote>
+<h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><blockquote>
+<p>1: 总是不可控的（即在编译期不可探测到异常;<br>2: 常用来表示系统错误;<br>3: 应该在系统级被捕获;</p>
+</blockquote>
 
       
     </div>
@@ -458,27 +481,19 @@
 
     <footer class="post-footer">
       
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/22/title/" rel="prev" title="title">
-                title <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/异常/" rel="tag"># 异常</a>
+          
         </div>
+      
+
+      
+      
+      
+
       
 
       
@@ -544,12 +559,25 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
 
               
@@ -561,7 +589,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -637,7 +667,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Error与Exception的区别"><span class="nav-number">1.</span> <span class="nav-text">Error与Exception的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#同"><span class="nav-number">1.1.</span> <span class="nav-text">同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同"><span class="nav-number">1.2.</span> <span class="nav-text">不同</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exception"><span class="nav-number">1.2.1.</span> <span class="nav-text">Exception</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error"><span class="nav-number">1.2.2.</span> <span class="nav-text">Error</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

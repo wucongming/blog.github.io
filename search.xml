@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[电影评论]]></title>
-    <url>%2F2019%2F02%2F22%2F%E7%94%B5%E5%BD%B1%E8%AF%84%E8%AE%BA%2F</url>
-    <content type="text"><![CDATA[#这是一个测试]]></content>
+    <title><![CDATA[error 与 exception的区别]]></title>
+    <url>%2F2019%2F02%2F24%2Ferror-%E4%B8%8E-exception%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[Error与Exception的区别 同 1:两者都继承自Throwable 不同Exception 1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类); 注:可控不可控就看在代码编写时能否检测到异常;2: 表示有一个程序员导致的错误;3: 应该在应用级被处理; Error 1: 总是不可控的（即在编译期不可探测到异常;2: 常用来表示系统错误;3: 应该在系统级被捕获;]]></content>
+      <categories>
+        <category>面试</category>
+      </categories>
       <tags>
-        <tag>技术</tag>
+        <tag>java</tag>
+        <tag>异常</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[title]]></title>
-    <url>%2F2019%2F02%2F22%2Ftitle%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F02%2F22%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
