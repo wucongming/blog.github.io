@@ -1,60 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[jk]]></title>
-    <url>https%3A%2F%2Fwww.butong.live%2F2019%2F07%2F20%2Fjk%2F</url>
-    <content type="text"></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>jk</title>
+      <link href="https://www.butong.live/2019/07/20/jk/"/>
+      <url>https://www.butong.live/2019/07/20/jk/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
       <categories>
-        <category>�㷨</category>
+          
+          <category> �㷨 </category>
+          
       </categories>
-      <tags>
-        <tag>�㷨</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[动态规划]]></title>
-    <url>https%3A%2F%2Fwww.butong.live%2F2019%2F06%2F06%2F%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2F</url>
-    <content type="text"></content>
+      
+      
+        <tags>
+            
+            <tag> �㷨 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>动态规划</title>
+      <link href="https://www.butong.live/2019/06/06/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <url>https://www.butong.live/2019/06/06/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
       <categories>
-        <category>算法</category>
+          
+          <category> 算法 </category>
+          
       </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[计算机常见英语单词翻译]]></title>
-    <url>https%3A%2F%2Fwww.butong.live%2F2019%2F04%2F26%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E8%A7%81%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%BF%BB%E8%AF%91%2F</url>
-    <content type="text"></content>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机常见英语单词翻译</title>
+      <link href="https://www.butong.live/2019/04/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E8%A7%81%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+      <url>https://www.butong.live/2019/04/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E8%A7%81%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%BF%BB%E8%AF%91/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
       <categories>
-        <category>大杂烩</category>
+          
+          <category> 大杂烩 </category>
+          
       </categories>
-      <tags>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[阿里云环境下配置Nginx的SSL证书]]></title>
-    <url>https%3A%2F%2Fwww.butong.live%2F2019%2F04%2F04%2F%E9%98%BF%E9%87%8C%E4%BA%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AENginx%E7%9A%84SSL%E8%AF%81%E4%B9%A6%2F</url>
-    <content type="text"><![CDATA[阿里云服务器Nginx环境下配置SSL证书HTTPS的认识### HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。 &#8194;&#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1-1所示)。所以本次我将记录下在阿里云服务器Nginx环境下配置https协议过程。如在其他云运行商，亦可参考。 第一步：下载SSL证书 SSL证书分为收费版和免费的，作为一个土豆丝，我只能申请免费版的ssl证书，为期一年，但是可以无限申请。至于在哪里下呢。请按如下步骤。 进入域名的云解析控制台 （当然，前提是咱们有个域名）界面如图（2-1）所示 在你要配置SSL证书的那一项点击旁边的更多，然后又一个SSL证书按钮（如图2-2），点击它。 申请Symantec DV SSL证书 在阿里云平台中该证书是免费的，但是期限只有一年，一年后过期可再来申请。如图2-3填写要申请的域名，刚开始我输入*想为所有二级域名配置ssl证书，但是发现申请的按钮是灰的。后来发现输入www则没事，输入别的应该也可以吧，大家可以试试。 填写验证信息 大家在这里可能会遇见图2-4这种错误，但是大家不要方。刚开始我也遇见了，后来发现他是在域名解析规则中添加了一个主机记录为_dnsauth的解析规则。而域名解析规则更新到dns服务器上要等一会儿，所以大家乘这个机会喝杯茶，等下点击验证就ojbk。 下载证书 上一步验证成功后，就会跳转到SSL证书下载页面（如图2-5）。大家根据自己的需求下载对应的证书就可以了，我是要配置Nginx的SSL证书所以这里我选择了Nginx版的。到此第一阶段就结束了。 第二步：配置Nginx将证书上传服务器 我先将下载的压缩包解压开，然后里面会有一个pem和key文件。然后通过scp命令（命令如下）将该软件上传到服务器的Nginx配置文件夹中的一个文件夹(SSL文件夹，这个文件夹是我自己建的，大家可以上传到自己喜欢的目录中) 123scp -r 2020586_www.butong.live.key 2020586_www.butong.live.pem root@www.butong.live:/etc/nginx/ssl//格式scp -r 文件[ 文件] 用户名@域名或ip:/上传到的文件夹 修改nginx.conf文件 在server中添加以下几行代码（以下代码可与原来的配置http代码共存，所以无需删除之前http的配置）然后保存退出运行 nginx -s reload命令重启Nginx即可。 12345678910server &#123; listen 443 ssl; ssl on; ssl_certificate ssl/2020586_www.butong.live.pem; # 你解压开的文件放在的目录 ssl_certificate_key ssl/2020586_www.butong.live.key; # 你解压开的文件放在的目录 ssl_session_timeout 5m; ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; ssl_prefer_server_ciphers on; 、、、 # 后面的保持原来的配置文件不变即可 以上就是在阿里云环境下配置Nginx的ssl证书的完整过程。]]></content>
+      
+      
+        <tags>
+            
+            <tag> 英语 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>阿里云环境下配置Nginx的SSL证书</title>
+      <link href="https://www.butong.live/2019/04/04/%E9%98%BF%E9%87%8C%E4%BA%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AENginx%E7%9A%84SSL%E8%AF%81%E4%B9%A6/"/>
+      <url>https://www.butong.live/2019/04/04/%E9%98%BF%E9%87%8C%E4%BA%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AENginx%E7%9A%84SSL%E8%AF%81%E4%B9%A6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="阿里云服务器Nginx环境下配置SSL证书"><a href="#阿里云服务器Nginx环境下配置SSL证书" class="headerlink" title="阿里云服务器Nginx环境下配置SSL证书"></a><center>阿里云服务器Nginx环境下配置SSL证书</center></h1><h2 id="HTTPS的认识"><a href="#HTTPS的认识" class="headerlink" title="HTTPS的认识"></a>HTTPS的认识</h2><p>### </p><blockquote><p>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p></blockquote><p>&#8194;&#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1-1所示)。所以本次我将记录下在阿里云服务器Nginx环境下配置https协议过程。如在其他云运行商，亦可参考。<br><a id="more"></a></p><p><img src="http://ppf89if8g.bkt.clouddn.com/201904041349_337.png" alt="图1-1  没配置ssl证书时https访问无效"></p><h2 id="第一步：下载SSL证书"><a href="#第一步：下载SSL证书" class="headerlink" title="第一步：下载SSL证书"></a>第一步：下载SSL证书</h2><p><br></p><blockquote><p>SSL证书分为收费版和免费的，作为一个土豆丝，我只能申请免费版的ssl证书，为期一年，但是可以无限申请。至于在哪里下呢。请按如下步骤。</p></blockquote><h3 id="进入域名的云解析控制台"><a href="#进入域名的云解析控制台" class="headerlink" title="进入域名的云解析控制台"></a>进入域名的云解析控制台</h3><blockquote><p>（当然，前提是咱们有个域名）界面如图（2-1）所示<br> 在你要配置SSL证书的那一项点击旁边的更多，然后又一个SSL证书按钮（如图2-2），点击它。</p></blockquote><p><img src="http://ppf89if8g.bkt.clouddn.com/201904041401_326.png" alt="图2-1  云解析控制台"><br><img src="http://ppf89if8g.bkt.clouddn.com/201904041404_248.png" alt="图2-2"></p><h3 id="申请Symantec-DV-SSL证书"><a href="#申请Symantec-DV-SSL证书" class="headerlink" title="申请Symantec DV SSL证书"></a>申请Symantec DV SSL证书</h3><blockquote><p>在阿里云平台中该证书是免费的，但是期限只有一年，一年后过期可再来申请。<br>如图2-3填写要申请的域名，刚开始我输入*想为所有二级域名配置ssl证书，但是发现申请的按钮是灰的。后来发现输入www则没事，输入别的应该也可以吧，大家可以试试。</p></blockquote><p><img src="http://ppf89if8g.bkt.clouddn.com/201904041408_734.png" alt="图2-3"></p><h3 id="填写验证信息"><a href="#填写验证信息" class="headerlink" title="填写验证信息"></a>填写验证信息</h3><blockquote><p>大家在这里可能会遇见图2-4这种错误，但是大家不要方。<br>刚开始我也遇见了，后来发现他是在域名解析规则中添加了一个主机记录为_dnsauth的解析规则。<br>而域名解析规则更新到dns服务器上要等一会儿，所以大家乘这个机会喝杯茶，等下点击验证就ojbk。</p></blockquote><p><img src="http://ppf89if8g.bkt.clouddn.com/201904041411_993.png" alt="图2-4"></p><h3 id="下载证书"><a href="#下载证书" class="headerlink" title="下载证书"></a>下载证书</h3><blockquote><p>上一步验证成功后，就会跳转到SSL证书下载页面（如图2-5）。大家根据自己的需求下载对应的证书就可以了，我是要配置Nginx的SSL证书所以这里我选择了Nginx版的。到此第一阶段就结束了。</p></blockquote><p><img src="http://ppf89if8g.bkt.clouddn.com/201904041413_941.png" alt="图2-5"></p><h2 id="第二步：配置Nginx"><a href="#第二步：配置Nginx" class="headerlink" title="第二步：配置Nginx"></a>第二步：配置Nginx</h2><h3 id="将证书上传服务器"><a href="#将证书上传服务器" class="headerlink" title="将证书上传服务器"></a>将证书上传服务器</h3><blockquote><p>我先将下载的压缩包解压开，然后里面会有一个pem和key文件。然后通过scp命令（命令如下）将该软件上传到服务器的Nginx配置文件夹中的一个文件夹(SSL文件夹，这个文件夹是我自己建的，大家可以上传到自己喜欢的目录中)</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp -r 2020586_www.butong.live.key 2020586_www.butong.live.pem root@www.butong.live:/etc/nginx/ssl</span><br><span class="line">//格式</span><br><span class="line">scp -r 文件[ 文件] 用户名@域名或ip:/上传到的文件夹</span><br></pre></td></tr></table></figure><h3 id="修改nginx-conf文件"><a href="#修改nginx-conf文件" class="headerlink" title="修改nginx.conf文件"></a>修改nginx.conf文件</h3><blockquote><p>在server中添加以下几行代码（以下代码可与原来的配置http代码共存，所以无需删除之前http的配置）<br>然后保存退出运行 nginx -s reload命令重启Nginx即可。 </p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 443 ssl;</span><br><span class="line">    ssl on;</span><br><span class="line">    ssl_certificate ssl/2020586_www.butong.live.pem; # 你解压开的文件放在的目录</span><br><span class="line">    ssl_certificate_key ssl/2020586_www.butong.live.key; # 你解压开的文件放在的目录</span><br><span class="line">    ssl_session_timeout 5m;</span><br><span class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line">    、、、 # 后面的保持原来的配置文件不变即可</span><br></pre></td></tr></table></figure><blockquote><p>以上就是在阿里云环境下配置Nginx的ssl证书的完整过程。</p></blockquote>]]></content>
+      
+      
       <categories>
-        <category>Nginx</category>
+          
+          <category> Nginx </category>
+          
       </categories>
-      <tags>
-        <tag>HTTPS协议</tag>
-        <tag>SSL证书</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[error 与 exception的区别]]></title>
-    <url>https%3A%2F%2Fwww.butong.live%2F2019%2F02%2F24%2Ferror-%E4%B8%8E-exception%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
-    <content type="text"><![CDATA[Error与Exception的区别 同 1:两者都继承自Throwable 不同Exception 1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类); 注:可控不可控就看在代码编写时能否检测到异常;2: 表示有一个程序员导致的错误;3: 应该在应用级被处理; Error 1: 总是不可控的（即在编译期不可探测到异常;2: 常用来表示系统错误;3: 应该在系统级被捕获;]]></content>
+      
+      
+        <tags>
+            
+            <tag> HTTPS协议 </tag>
+            
+            <tag> SSL证书 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>error 与 exception的区别</title>
+      <link href="https://www.butong.live/2019/02/24/error-%E4%B8%8E-exception%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+      <url>https://www.butong.live/2019/02/24/error-%E4%B8%8E-exception%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Error与Exception的区别"><a href="#Error与Exception的区别" class="headerlink" title="Error与Exception的区别"></a><center>Error与Exception的区别</center></h1><hr><h2 id="同"><a href="#同" class="headerlink" title="同"></a>同</h2><blockquote><p>1:两者都继承自Throwable</p></blockquote><h2 id="不同"><a href="#不同" class="headerlink" title="不同"></a>不同</h2><h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><blockquote><p>1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类);<br>         注:可控不可控就看在代码编写时能否检测到异常;<br>2: 表示有一个程序员导致的错误;<br>3: 应该在应用级被处理;</p></blockquote><h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><blockquote><p>1: 总是不可控的（即在编译期不可探测到异常;<br>2: 常用来表示系统错误;<br>3: 应该在系统级被捕获;</p></blockquote>]]></content>
+      
+      
       <categories>
-        <category>面试</category>
+          
+          <category> 面试 </category>
+          
       </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>异常</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 异常 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
