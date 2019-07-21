@@ -105,7 +105,7 @@
 <meta property="og:description" content="这三个类都属于org.springframework.beans.factory包下，并且名字都有点相似，但在功能上却大部相同。具体有哪些不同呢？下面将从这三个类的功能与用法分别分析。  BeanFactory 该类名以Factory结尾，其实质为一个Bean工厂接口，源码如下。从源码可以看出这个接口定义了Bean工厂的一些基本操作。所以这个接口起到了规范Bean工厂的基本操作作用。其基本实现有">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://user-images.githubusercontent.com/33340562/61588886-352c7300-abd5-11e9-90f7-1ac0d1818130.png">
-<meta property="og:updated_time" content="2019-07-21T10:56:02.850Z">
+<meta property="og:updated_time" content="2019-07-21T10:59:04.774Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BeanFactory、FactoryBean、ObjectFactory的区别">
 <meta name="twitter:description" content="这三个类都属于org.springframework.beans.factory包下，并且名字都有点相似，但在功能上却大部相同。具体有哪些不同呢？下面将从这三个类的功能与用法分别分析。  BeanFactory 该类名以Factory结尾，其实质为一个Bean工厂接口，源码如下。从源码可以看出这个接口定义了Bean工厂的一些基本操作。所以这个接口起到了规范Bean工厂的基本操作作用。其基本实现有">
@@ -395,7 +395,7 @@
                 
               
 
-              <time title="创建时间：2019-07-21 18:51:17 / 修改时间：18:56:02" itemprop="dateCreated datePublished" datetime="2019-07-21T18:51:17+08:00">2019-07-21</time>
+              <time title="创建时间：2019-07-21 18:51:17 / 修改时间：18:59:04" itemprop="dateCreated datePublished" datetime="2019-07-21T18:51:17+08:00">2019-07-21</time>
             
 
             
@@ -469,7 +469,7 @@
 <p>这三个类都属于org.springframework.beans.factory包下，并且名字都有点相似，但在功能上却大部相同。具体有哪些不同呢？下面将从这三个类的功能与用法分别分析。</p>
 </blockquote>
 <h2 id="BeanFactory"><a href="#BeanFactory" class="headerlink" title="BeanFactory"></a>BeanFactory</h2><blockquote>
-<p>该类名以Factory结尾，其实质为一个Bean工厂接口，源码如下。从源码可以看出这个接口定义了Bean工厂的一些基本操作。所以这个接口起到了规范Bean工厂的基本操作作用。其基本实现有HierarchicalBeanFactory、ListableBeanFactory和ConfigurableBeanFactory以及各种ApplicationContext等等。如果想看BeanFactory的基本实现可以去看ListableBeanFactory的源码。而BeanFactory的使用则推荐使用ApplicationContext的一些派生类（如FileSystemXmlApplicationContext以及AnnotationConfigApplicationContext等类）</p>
+<p>该类名以Factory结尾，其实质为一个Bean工厂接口，源码如下。从源码可以看出这个接口定义了Bean工厂的一些基本操作。所以这个接口起到了规范Bean工厂的基本操作作用。其基本实现有HierarchicalBeanFactory、ListableBeanFactory和ConfigurableBeanFactory以及各种ApplicationContext等等。如果想看BeanFactory的基本实现可以去看ListableBeanFactory的源码。而BeanFactory的使用则推荐使用ApplicationContext的一些派生类（如FileSystemXmlApplicationContext以及AnnotationConfigApplicationContext等类）。</p>
 </blockquote>
 <a id="more"></a>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">BeanFactory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	String FACTORY_BEAN_PREFIX = <span class="string">"&amp;"</span>; <span class="comment">// 这个与FactoryBean有关，后面会介绍到</span></span><br><span class="line">	<span class="function">Object <span class="title">getBean</span><span class="params">(String name)</span> <span class="keyword">throws</span> BeansException</span>;</span><br><span class="line">	&lt;T&gt; <span class="function">T <span class="title">getBean</span><span class="params">(String name, Class&lt;T&gt; requiredType)</span> <span class="keyword">throws</span> BeansException</span>;</span><br><span class="line">	&lt;T&gt; <span class="function">T <span class="title">getBean</span><span class="params">(Class&lt;T&gt; requiredType)</span> <span class="keyword">throws</span> BeansException</span>;</span><br><span class="line">	<span class="function">Object <span class="title">getBean</span><span class="params">(String name, Object... args)</span> <span class="keyword">throws</span> BeansException</span>;</span><br><span class="line">	&lt;T&gt; <span class="function">T <span class="title">getBean</span><span class="params">(Class&lt;T&gt; requiredType, Object... args)</span> <span class="keyword">throws</span> BeansException</span>;</span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">containsBean</span><span class="params">(String name)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">isSingleton</span><span class="params">(String name)</span> <span class="keyword">throws</span> NoSuchBeanDefinitionException</span>;</span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">isPrototype</span><span class="params">(String name)</span> <span class="keyword">throws</span> NoSuchBeanDefinitionException</span>; <span class="comment">//是否是多例的意思</span></span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">isTypeMatch</span><span class="params">(String name, ResolvableType typeToMatch)</span> <span class="keyword">throws</span> NoSuchBeanDefinitionException</span>;</span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">isTypeMatch</span><span class="params">(String name, Class&lt;?&gt; typeToMatch)</span> <span class="keyword">throws</span> NoSuchBeanDefinitionException</span>;</span><br><span class="line">	Class&lt;?&gt; getType(String name) <span class="keyword">throws</span> NoSuchBeanDefinitionException;</span><br><span class="line">	String[] getAliases(String name); <span class="comment">// 获取Bean的别名</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -483,7 +483,7 @@
 </blockquote>
 <p>展示中涉及三个类<br><br>Test类：main方法<br><br>Car类：FactoryBean中构建的。<br><br>CarFactoryBean类：继承了FactoryBean专用来构建Car的。</p>
 <blockquote>
-<p>Car</p>
+<p>Car：</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"I'm Car"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
