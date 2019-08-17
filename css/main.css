@@ -1320,6 +1320,10 @@ pre .javascript .function {
 .use-motion .collection-title {
   opacity: 0;
 }
+strong {
+  background-color: #fff5f5;
+  color: #ff502c;
+}
 .posts-expand {
   padding-top: 40px;
 }
@@ -2003,7 +2007,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fa2259;
+  background: #46779d;
 }
 .links-of-blogroll {
   font-size: 13px;
