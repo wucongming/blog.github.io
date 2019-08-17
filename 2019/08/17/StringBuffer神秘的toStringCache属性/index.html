@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="Error与Exception的区别 同 1:两者都继承自Throwable  不同Exception 1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类);         注:可控不可控就看在代码编写时能否检测到异常;2: 表示有一个程序员导致的错误;3: 应该在应用级被处理;  Error 1: 总是不可控的（即在编译期不可探测到异常;2: 常用来表示系统错误;">
-<meta name="keywords" content="java,异常">
+  <meta name="description" content="前言 大家都知道直接对String字符串进行拼接等操作时，会创建大量的String对象。因此用String直接进行这些操作效率会很低。所以催生了StringBuilder和StringBuffer这两个类。这两个类基本相同，但是StringBuffer多了一个toStringCache变量（后面具体讲解该变量作用），并在方法体上加了synchronized。">
+<meta name="keywords" content="Java、IT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="error 与 exception的区别">
-<meta property="og:url" content="http://www.butong.live/2019/02/24/error-与-exception的区别/index.html">
+<meta property="og:title" content="StringBuffer神秘的toStringCache属性">
+<meta property="og:url" content="http://www.butong.live/2019/08/17/StringBuffer神秘的toStringCache属性/index.html">
 <meta property="og:site_name" content="Wu">
-<meta property="og:description" content="Error与Exception的区别 同 1:两者都继承自Throwable  不同Exception 1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类);         注:可控不可控就看在代码编写时能否检测到异常;2: 表示有一个程序员导致的错误;3: 应该在应用级被处理;  Error 1: 总是不可控的（即在编译期不可探测到异常;2: 常用来表示系统错误;">
+<meta property="og:description" content="前言 大家都知道直接对String字符串进行拼接等操作时，会创建大量的String对象。因此用String直接进行这些操作效率会很低。所以催生了StringBuilder和StringBuffer这两个类。这两个类基本相同，但是StringBuffer多了一个toStringCache变量（后面具体讲解该变量作用），并在方法体上加了synchronized。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-24T05:14:57.042Z">
+<meta property="og:updated_time" content="2019-08-17T07:10:14.855Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="error 与 exception的区别">
-<meta name="twitter:description" content="Error与Exception的区别 同 1:两者都继承自Throwable  不同Exception 1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类);         注:可控不可控就看在代码编写时能否检测到异常;2: 表示有一个程序员导致的错误;3: 应该在应用级被处理;  Error 1: 总是不可控的（即在编译期不可探测到异常;2: 常用来表示系统错误;">
+<meta name="twitter:title" content="StringBuffer神秘的toStringCache属性">
+<meta name="twitter:description" content="前言 大家都知道直接对String字符串进行拼接等操作时，会创建大量的String对象。因此用String直接进行这些操作效率会很低。所以催生了StringBuilder和StringBuffer这两个类。这两个类基本相同，但是StringBuffer多了一个toStringCache变量（后面具体讲解该变量作用），并在方法体上加了synchronized。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.butong.live/2019/02/24/error-与-exception的区别/">
+  <link rel="canonical" href="http://www.butong.live/2019/08/17/StringBuffer神秘的toStringCache属性/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>error 与 exception的区别 | Wu</title>
+  <title>StringBuffer神秘的toStringCache属性 | Wu</title>
   
 
 
@@ -350,7 +350,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.butong.live/2019/02/24/error-与-exception的区别/">
+    <link itemprop="mainEntityOfPage" href="http://www.butong.live/2019/08/17/StringBuffer神秘的toStringCache属性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tony">
@@ -367,7 +367,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">error 与 exception的区别
+          <h1 class="post-title" itemprop="name headline">StringBuffer神秘的toStringCache属性
 
               
             
@@ -393,7 +393,7 @@
                 
               
 
-              <time title="创建时间：2019-02-24 12:45:27 / 修改时间：13:14:57" itemprop="dateCreated datePublished" datetime="2019-02-24T12:45:27+08:00">2019-02-24</time>
+              <time title="创建时间：2019-08-17 10:45:22 / 修改时间：15:10:14" itemprop="dateCreated datePublished" datetime="2019-08-17T10:45:22+08:00">2019-08-17</time>
             
 
             
@@ -403,24 +403,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/面试/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -434,8 +416,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/02/24/error-与-exception的区别/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/02/24/error-与-exception的区别/" itemprop="commentCount"></span>
+                <a href="/2019/08/17/StringBuffer神秘的toStringCache属性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/08/17/StringBuffer神秘的toStringCache属性/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -463,16 +445,32 @@
       
 
       
-        <h1 id="Error与Exception的区别"><a href="#Error与Exception的区别" class="headerlink" title="Error与Exception的区别"></a><center>Error与Exception的区别</center></h1><hr>
-<h2 id="同"><a href="#同" class="headerlink" title="同"></a>同</h2><blockquote>
-<p>1:两者都继承自Throwable</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<p>大家都知道直接对String字符串进行拼接等操作时，会创建大量的String对象。因此用String直接进行这些操作效率会很低。所以催生了StringBuilder和StringBuffer这两个类。这两个类基本相同，但是StringBuffer多了一个toStringCache变量（后面具体讲解该变量作用），并在方法体上加了synchronized。<br><a id="more"></a></p>
+<h2 id="StringBuilder和StringBuffer的相同点"><a href="#StringBuilder和StringBuffer的相同点" class="headerlink" title="StringBuilder和StringBuffer的相同点"></a>StringBuilder和StringBuffer的相同点</h2><hr>
+<ul>
+<li>都继承于AbstractStringBuilder类。</li>
+<li>都实现了java.io.Serializable, CharSequence接口。</li>
+<li>字符串都是存储在一个字符数组中。<h2 id="StringBuilder和StringBuffer不同点一"><a href="#StringBuilder和StringBuffer不同点一" class="headerlink" title="StringBuilder和StringBuffer不同点一"></a>StringBuilder和StringBuffer不同点一</h2></li>
+</ul>
+<hr>
+<p>StringBuffer是线程安全的，而StringBuilder是线程不安全的。那StringBuffer是怎么实现线程安全的呢？通过源码的对比，可以看到两个类的实现大致相同，不一样的就是StringBuffer在方法体加了synchronized。</p>
+<h2 id="StringBuilder和StringBuffer不同点二"><a href="#StringBuilder和StringBuffer不同点二" class="headerlink" title="StringBuilder和StringBuffer不同点二"></a>StringBuilder和StringBuffer不同点二</h2><hr>
+<p>在对比两个类的源码，发现StringBuffer多了一个toStringCache<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * A cache of the last value returned by toString. Cleared</span></span><br><span class="line"><span class="comment"> * whenever the StringBuffer is modified.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">transient</span> <span class="keyword">char</span>[] toStringCache;</span><br></pre></td></tr></table></figure></p>
+<p>这个属性的作用是缓存toString方法返回的最后一个值，当StringBuffer对象被修改时，这个变量都会被设置为NULL。</p>
+<p><strong> toStringCache的作用 </strong></p>
+<p>众所周知对字符串的操作效率StringBuilder &gt; StringBuffer &gt; String<br>也就是说StringBuffer的效率并不是最棒的，所以仍需提高，设置toStringCache的作用就是为了提高效率</p>
+<p><strong> 问题来了：toStringCache是怎么提高效率的 </strong></p>
+<h2 id="先看看StringBuilder和StringBuffer两个类中的toString方法"><a href="#先看看StringBuilder和StringBuffer两个类中的toString方法" class="headerlink" title="先看看StringBuilder和StringBuffer两个类中的toString方法"></a>先看看StringBuilder和StringBuffer两个类中的toString方法</h2><blockquote>
+<p>StringBuffer的toString方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (toStringCache == <span class="keyword">null</span>) &#123;</span><br><span class="line">        toStringCache = Arrays.copyOfRange(value, <span class="number">0</span>, count);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> String(toStringCache, <span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="不同"><a href="#不同" class="headerlink" title="不同"></a>不同</h2><h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><blockquote>
-<p>1: 可以是可被控制或不可控制(例如RuntimeException异常及其子类);<br>         注:可控不可控就看在代码编写时能否检测到异常;<br>2: 表示有一个程序员导致的错误;<br>3: 应该在应用级被处理;</p>
+<blockquote>
+<p>StringBuilder的toString方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Create a copy, don't share the array</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> String(value, <span class="number">0</span>, count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><blockquote>
-<p>1: 总是不可控的（即在编译期不可探测到异常;<br>2: 常用来表示系统错误;<br>3: 应该在系统级被捕获;</p>
-</blockquote>
+<p>从两个方法中可以看到StringBuffer已经将方法重写为了synchronized方法，已经实现了线程安全，可是方法的具体实现却不同。<br><strong> 两个方法创建String的方法分别为： </strong><br>new String(toStringCache, true);   –对应的构造方法–&gt;   String(char[] value, boolean share)<br>new String(value, 0, count); –&gt;对应的构造方法–&gt;  String(char value[], int offset, int count)  </p>
+<p><strong> 所以现在需要去了解两个构造方法的不同 </strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">String</span><span class="params">(<span class="keyword">char</span> value[], <span class="keyword">int</span> offset, <span class="keyword">int</span> count)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//此处省略一部分代码</span></span><br><span class="line">    ......</span><br><span class="line">    <span class="keyword">this</span>.value = Arrays.copyOfRange(value, offset, offset+count); <span class="comment">//复制数组到value</span></span><br><span class="line">																							        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//完整的函数，就是这么简单粗暴</span></span><br><span class="line">String(<span class="keyword">char</span>[] value, <span class="keyword">boolean</span> share) &#123;</span><br><span class="line">   <span class="comment">// assert share : "unshared not supported";</span></span><br><span class="line">   <span class="keyword">this</span>.value = value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>从上面可以看出<br>调用String(char[] value, boolean share) 不用复制数组<br>调用String(char value[], int offset, int count) 需要复制数组</p>
+<p>再回到StringBuffer和StringBuilder的toString方法就知道StringBuffer只有当toStringCache是NULL的时候（也就是当字符串发生变化）需要复制数组，而StringBuilder的toString方法每次创建String都要复制数组。所以现在清楚了toStringCache就是这样提高一点点效率。</p>
 
       
     </div>
@@ -523,14 +521,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/异常/" rel="tag"># 异常</a>
-          
-        </div>
-      
 
       
       
@@ -540,15 +530,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/07/22/Spring中Bean的生命周期/" rel="next" title="Spring中Bean的生命周期">
+                <i class="fa fa-chevron-left"></i> Spring中Bean的生命周期
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/04/阿里云环境下配置Nginx的SSL证书/" rel="prev" title="阿里云环境下配置Nginx的SSL证书">
-                阿里云环境下配置Nginx的SSL证书 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -756,7 +746,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Error与Exception的区别"><span class="nav-number">1.</span> <span class="nav-text">Error与Exception的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#同"><span class="nav-number">1.1.</span> <span class="nav-text">同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同"><span class="nav-number">1.2.</span> <span class="nav-text">不同</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exception"><span class="nav-number">1.2.1.</span> <span class="nav-text">Exception</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error"><span class="nav-number">1.2.2.</span> <span class="nav-text">Error</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#StringBuilder和StringBuffer的相同点"><span class="nav-number">2.</span> <span class="nav-text">StringBuilder和StringBuffer的相同点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#StringBuilder和StringBuffer不同点一"><span class="nav-number">3.</span> <span class="nav-text">StringBuilder和StringBuffer不同点一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#StringBuilder和StringBuffer不同点二"><span class="nav-number">4.</span> <span class="nav-text">StringBuilder和StringBuffer不同点二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先看看StringBuilder和StringBuffer两个类中的toString方法"><span class="nav-number">5.</span> <span class="nav-text">先看看StringBuilder和StringBuffer两个类中的toString方法</span></a></li></ol></div>
             
 
           </div>
