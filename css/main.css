@@ -546,13 +546,10 @@ code {
   font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
 code {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  padding: 2px 4px;
-  color: #555;
-  background: #eee;
-  border-radius: 3px;
+  background-color: #fff5f5;
+  color: #ff502c;
   font-size: 14px;
+  padding: 0.065em 0.4em;
 }
 pre {
   padding: 10px;
@@ -1320,12 +1317,6 @@ pre .javascript .function {
 .use-motion .collection-title {
   opacity: 0;
 }
-code {
-  background-color: #fff5f5;
-  color: #ff502c;
-  font-size: 0.87em;
-  padding: 0.065em 0.4em;
-}
 .posts-expand {
   padding-top: 40px;
 }
@@ -2009,7 +2000,7 @@ code {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ab918e;
+  background: #a1ff0a;
 }
 .links-of-blogroll {
   font-size: 13px;
