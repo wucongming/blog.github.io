@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Ant风格]]></title>
     <url>%2F2019%2F09%2F01%2FAnt%E9%A3%8E%E6%A0%BC%2F</url>
-    <content type="text"><![CDATA[前言在阅读dalao的文章时，看到支持Ant风格。遂对Ant风格产生了好奇。遂写此blog以做笔记。 Ant风格：就是匹配路径和url的一种规则。例如：我们常见的C:/project/*.html匹配C盘目录下project文件夹中的所有html文件。 规则 符号 说明 ? 匹配任何单字符 * 匹配0或者任意数量的字符 ** 匹配0或者更多的目录 例如URL路径 | 说明–|–:/project/.a | 匹配项目根路径下所有在project路径下的.a文件/project/p?ttern | 匹配项目根路径下 /project/pattern 和 /app/pXttern,但是不包括/app/pttern//example | 匹配项目根路径下 /project/example, /project/foow/example, 和 /example/project//dir/file. | 匹配项目根路径下/project/dir/file.jsp, /project/foow/dir/file.html,/project/foow/bar/dir/file.pdf/*/.jsp | 匹配项目根路径下任何的.jsp 文件 注意：如果一个路径存在多个匹配，那么将选择最长的匹配。例如：URL请求/project/dir/file.jsp，现在存在两个路径匹配模式/*/.jsp和/project/dir/.jsp，那么会根据模式/project/dir/.jsp来匹配]]></content>
+    <content type="text"><![CDATA[前言在阅读dalao的文章时，看到支持Ant风格。遂对Ant风格产生了好奇。遂写此blog以做笔记。 Ant风格：就是匹配路径和url的一种规则。例如：我们常见的C:/project/*.html匹配C盘目录下project文件夹中的所有html文件。 规则 符号 说明 ? 匹配任何单字符 * 匹配0或者任意数量的字符 ** 匹配0或者更多的目录 例如URL路径 | 说明–|–:/project/.a|匹配项目根路径下所有在project路径下的.a文件/project/p?ttern|匹配项目根路径下 /project/pattern 和 /app/pXttern,但是不包括/app/pttern//example|匹配项目根路径下 /project/example, /project/foow/example, 和 /example/project//dir/file.|匹配项目根路径下/project/dir/file.jsp, /project/foow/dir/file.html,/project/foow/bar/dir/file.pdf/*/.jsp|匹配项目根路径下任何的.jsp 文件 注意：如果一个路径存在多个匹配，那么将选择最长的匹配。例如：URL请求/project/dir/file.jsp，现在存在两个路径匹配模式/*/.jsp和/project/dir/.jsp，那么会根据模式/project/dir/.jsp来匹配]]></content>
       <categories>
         <category>杂记</category>
       </categories>
