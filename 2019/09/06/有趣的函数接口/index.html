@@ -96,32 +96,25 @@
 
 
 
-  <meta name="description" content="阿里云服务器Nginx环境下配置SSL证书HTTPS的认识###   HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  &amp;#8194;&amp;#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1">
-<meta name="keywords" content="HTTPS协议,SSL证书">
+  <meta name="description" content="前言在看spring源码路径解析的时候，遇见了helper.replacePlaceholders(text, this::getPropertyAsRawString);。这里有个很奇怪的this::getPropertyAsRawString。::这个符号在C++中很眼熟，但是在java中还是第一次见（是我太菜没怎么学过java8，后面一定要补上。先在此记录。）,也不知道传了什么东西过去。">
+<meta name="keywords" content="spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阿里云环境下配置Nginx的SSL证书">
-<meta property="og:url" content="http://www.butong.live/2019/04/04/阿里云环境下配置Nginx的SSL证书/index.html">
+<meta property="og:title" content="有趣的函数接口">
+<meta property="og:url" content="http://www.butong.live/2019/09/06/有趣的函数接口/index.html">
 <meta property="og:site_name" content="Wu">
-<meta property="og:description" content="阿里云服务器Nginx环境下配置SSL证书HTTPS的认识###   HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  &amp;#8194;&amp;#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1">
+<meta property="og:description" content="前言在看spring源码路径解析的时候，遇见了helper.replacePlaceholders(text, this::getPropertyAsRawString);。这里有个很奇怪的this::getPropertyAsRawString。::这个符号在C++中很眼熟，但是在java中还是第一次见（是我太菜没怎么学过java8，后面一定要补上。先在此记录。）,也不知道传了什么东西过去。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041349_337.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041401_326.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041404_248.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041408_734.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041411_993.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041413_941.png">
-<meta property="og:updated_time" content="2019-04-04T08:29:10.910Z">
+<meta property="og:updated_time" content="2019-09-06T12:32:40.973Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阿里云环境下配置Nginx的SSL证书">
-<meta name="twitter:description" content="阿里云服务器Nginx环境下配置SSL证书HTTPS的认识###   HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  &amp;#8194;&amp;#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1">
-<meta name="twitter:image" content="http://ppf89if8g.bkt.clouddn.com/201904041349_337.png">
+<meta name="twitter:title" content="有趣的函数接口">
+<meta name="twitter:description" content="前言在看spring源码路径解析的时候，遇见了helper.replacePlaceholders(text, this::getPropertyAsRawString);。这里有个很奇怪的this::getPropertyAsRawString。::这个符号在C++中很眼熟，但是在java中还是第一次见（是我太菜没怎么学过java8，后面一定要补上。先在此记录。）,也不知道传了什么东西过去。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.butong.live/2019/04/04/阿里云环境下配置Nginx的SSL证书/">
+  <link rel="canonical" href="http://www.butong.live/2019/09/06/有趣的函数接口/">
 
 
 
@@ -131,7 +124,7 @@
   };
 </script>
 
-  <title>阿里云环境下配置Nginx的SSL证书 | Wu</title>
+  <title>有趣的函数接口 | Wu</title>
   
 
 
@@ -357,7 +350,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.butong.live/2019/04/04/阿里云环境下配置Nginx的SSL证书/">
+    <link itemprop="mainEntityOfPage" href="http://www.butong.live/2019/09/06/有趣的函数接口/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tony">
@@ -374,7 +367,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">阿里云环境下配置Nginx的SSL证书
+          <h1 class="post-title" itemprop="name headline">有趣的函数接口
 
               
             
@@ -400,7 +393,7 @@
                 
               
 
-              <time title="创建时间：2019-04-04 15:24:48 / 修改时间：16:29:10" itemprop="dateCreated datePublished" datetime="2019-04-04T15:24:48+08:00">2019-04-04</time>
+              <time title="创建时间：2019-09-06 20:31:22 / 修改时间：20:32:40" itemprop="dateCreated datePublished" datetime="2019-09-06T20:31:22+08:00">2019-09-06</time>
             
 
             
@@ -422,7 +415,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/框架/" itemprop="url" rel="index"><span itemprop="name">框架</span></a></span>
 
                 
                 
@@ -441,8 +434,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/04/阿里云环境下配置Nginx的SSL证书/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/04/04/阿里云环境下配置Nginx的SSL证书/" itemprop="commentCount"></span>
+                <a href="/2019/09/06/有趣的函数接口/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/09/06/有趣的函数接口/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -470,43 +463,21 @@
       
 
       
-        <h1 id="阿里云服务器Nginx环境下配置SSL证书"><a href="#阿里云服务器Nginx环境下配置SSL证书" class="headerlink" title="阿里云服务器Nginx环境下配置SSL证书"></a><center>阿里云服务器Nginx环境下配置SSL证书</center></h1><h2 id="HTTPS的认识"><a href="#HTTPS的认识" class="headerlink" title="HTTPS的认识"></a>HTTPS的认识</h2><p>### </p>
-<blockquote>
-<p>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
-</blockquote>
-<p>&#8194;&#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1-1所示)。所以本次我将记录下在阿里云服务器Nginx环境下配置https协议过程。如在其他云运行商，亦可参考。<br><a id="more"></a></p>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041349_337.png" alt="图1-1  没配置ssl证书时https访问无效"></p>
-<h2 id="第一步：下载SSL证书"><a href="#第一步：下载SSL证书" class="headerlink" title="第一步：下载SSL证书"></a>第一步：下载SSL证书</h2><p><br></p>
-<blockquote>
-<p>SSL证书分为收费版和免费的，作为一个土豆丝，我只能申请免费版的ssl证书，为期一年，但是可以无限申请。至于在哪里下呢。请按如下步骤。</p>
-</blockquote>
-<h3 id="进入域名的云解析控制台"><a href="#进入域名的云解析控制台" class="headerlink" title="进入域名的云解析控制台"></a>进入域名的云解析控制台</h3><blockquote>
-<p>（当然，前提是咱们有个域名）界面如图（2-1）所示<br> 在你要配置SSL证书的那一项点击旁边的更多，然后又一个SSL证书按钮（如图2-2），点击它。</p>
-</blockquote>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041401_326.png" alt="图2-1  云解析控制台"><br><img src="http://ppf89if8g.bkt.clouddn.com/201904041404_248.png" alt="图2-2"></p>
-<h3 id="申请Symantec-DV-SSL证书"><a href="#申请Symantec-DV-SSL证书" class="headerlink" title="申请Symantec DV SSL证书"></a>申请Symantec DV SSL证书</h3><blockquote>
-<p>在阿里云平台中该证书是免费的，但是期限只有一年，一年后过期可再来申请。<br>如图2-3填写要申请的域名，刚开始我输入*想为所有二级域名配置ssl证书，但是发现申请的按钮是灰的。后来发现输入www则没事，输入别的应该也可以吧，大家可以试试。</p>
-</blockquote>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041408_734.png" alt="图2-3"></p>
-<h3 id="填写验证信息"><a href="#填写验证信息" class="headerlink" title="填写验证信息"></a>填写验证信息</h3><blockquote>
-<p>大家在这里可能会遇见图2-4这种错误，但是大家不要方。<br>刚开始我也遇见了，后来发现他是在域名解析规则中添加了一个主机记录为_dnsauth的解析规则。<br>而域名解析规则更新到dns服务器上要等一会儿，所以大家乘这个机会喝杯茶，等下点击验证就ojbk。</p>
-</blockquote>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041411_993.png" alt="图2-4"></p>
-<h3 id="下载证书"><a href="#下载证书" class="headerlink" title="下载证书"></a>下载证书</h3><blockquote>
-<p>上一步验证成功后，就会跳转到SSL证书下载页面（如图2-5）。大家根据自己的需求下载对应的证书就可以了，我是要配置Nginx的SSL证书所以这里我选择了Nginx版的。到此第一阶段就结束了。</p>
-</blockquote>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041413_941.png" alt="图2-5"></p>
-<h2 id="第二步：配置Nginx"><a href="#第二步：配置Nginx" class="headerlink" title="第二步：配置Nginx"></a>第二步：配置Nginx</h2><h3 id="将证书上传服务器"><a href="#将证书上传服务器" class="headerlink" title="将证书上传服务器"></a>将证书上传服务器</h3><blockquote>
-<p>我先将下载的压缩包解压开，然后里面会有一个pem和key文件。然后通过scp命令（命令如下）将该软件上传到服务器的Nginx配置文件夹中的一个文件夹(SSL文件夹，这个文件夹是我自己建的，大家可以上传到自己喜欢的目录中)</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp -r 2020586_www.butong.live.key 2020586_www.butong.live.pem root@www.butong.live:/etc/nginx/ssl</span><br><span class="line">//格式</span><br><span class="line">scp -r 文件[ 文件] 用户名@域名或ip:/上传到的文件夹</span><br></pre></td></tr></table></figure>
-<h3 id="修改nginx-conf文件"><a href="#修改nginx-conf文件" class="headerlink" title="修改nginx.conf文件"></a>修改nginx.conf文件</h3><blockquote>
-<p>在server中添加以下几行代码（以下代码可与原来的配置http代码共存，所以无需删除之前http的配置）<br>然后保存退出运行 nginx -s reload命令重启Nginx即可。 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 443 ssl;</span><br><span class="line">    ssl on;</span><br><span class="line">    ssl_certificate ssl/2020586_www.butong.live.pem; # 你解压开的文件放在的目录</span><br><span class="line">    ssl_certificate_key ssl/2020586_www.butong.live.key; # 你解压开的文件放在的目录</span><br><span class="line">    ssl_session_timeout 5m;</span><br><span class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line">    、、、 # 后面的保持原来的配置文件不变即可</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>以上就是在阿里云环境下配置Nginx的ssl证书的完整过程。</p>
-</blockquote>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在看spring源码路径解析的时候，遇见了<code>helper.replacePlaceholders(text, this::getPropertyAsRawString);</code>。这里有个很奇怪的<code>this::getPropertyAsRawString</code>。<code>::</code>这个符号在C++中很眼熟，但是在java中还是第一次见（是我太菜没怎么学过java8，后面一定要补上。先在此记录。）,也不知道传了什么东西过去。</p>
+<a id="more"></a>
+<p>在好奇心的促使下，我点进了方法<code>replacePlaceholders</code>发现参数列表为<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">replacePlaceholders</span><span class="params">(String value, PlaceholderResolver placeholderResolver)</span> </span>&#123;</span><br><span class="line">    Assert.notNull(value, <span class="string">"'value' must not be null"</span>);</span><br><span class="line">    <span class="keyword">return</span> parseStringValue(value, placeholderResolver, <span class="keyword">null</span>);</span><br><span class="line">&#125;</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">发现第二个参数是&lt;code&gt;PlaceholderResolver&lt;/code&gt;类型，而这个类型是一个&lt;code&gt;FunctionalInterface&lt;/code&gt;接口，其源码如下：   </span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * Strategy interface used to resolve replacement values for placeholders contained in Strings.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PlaceholderResolver</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">        * Resolve the supplied placeholder name to the replacement value.</span></span><br><span class="line"><span class="comment">        * <span class="doctag">@param</span> placeholderName the name of the placeholder to resolve</span></span><br><span class="line"><span class="comment">        * <span class="doctag">@return</span> the replacement value, or &#123;<span class="doctag">@code</span> null&#125; if no replacement is to be made</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    <span class="meta">@Nullable</span></span><br><span class="line">    <span class="function">String <span class="title">resolvePlaceholder</span><span class="params">(String placeholderName)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 问题：FunctionalInterface注解作用</span><br><span class="line"></span><br><span class="line">如这个注解的名字所示，这个接口只是向大家声明该接口是一个函数接口。而声明为函数接口，有如下要求：</span><br><span class="line">- 只能有一个抽象函数(但是有例外，详情见下)。</span><br><span class="line">- 可以有<span class="keyword">default</span>修饰的方法，因为<span class="keyword">default</span>修饰的方法是已经实现了的</span><br><span class="line">- 函数接口中抽象函数可以有多个，但是除了自定义的抽象函数之外的抽象函数必须是Object中已实现的方法。（如：下面的代码）   </span><br><span class="line">```java</span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PlaceholderResolver</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">String <span class="title">resolvePlaceholder</span><span class="params">(String placeholderName)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"hh "</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">```   </span><br><span class="line">如果不是Object中已经实现的方法，则会报错。如下图：</span><br><span class="line"></span><br><span class="line">![image](https:<span class="comment">//user-images.githubusercontent.com/33340562/64415173-626eab00-d0c7-11e9-99a4-c8344c257eb9.png)</span></span><br><span class="line"></span><br><span class="line">知道函数接口的定义后，那函数接口怎么使用呢？以及他的作用</span><br><span class="line"></span><br><span class="line">## 使用步骤   </span><br><span class="line">定义一个函数接口</span><br><span class="line">```java</span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PlaceholderResolver</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">String <span class="title">resolvePlaceholder</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">定义一个将函数接口作为参数的方法</span><br><span class="line">```java</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(PlaceholderResolver placeholderResolver)</span> </span>&#123;</span><br><span class="line">    placeholderResolver.resolvePlaceholder();</span><br><span class="line">&#125;</span><br><span class="line">```   </span><br><span class="line">在定义一个方法   </span><br><span class="line">```java</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"我是print方法"</span>)</span><br><span class="line">    <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>现在就可以愉快的使用了<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    test(<span class="keyword">this</span>::print);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>而上面调用test方法后就会输出在执行<code>placeholderResolver.resolvePlaceholder(“啦啦啦”);</code>时输出<code>我是print方法</code>。其作用也就是将print方法赋给PlaceholderResolver中的resolvePlaceholder，所以在调用resolvePlaceholder方法会执行print。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>究其到底函数接口只是一个语法糖，它是java8一个新的语法糖。它的效果等价于：</p>
+<pre><code class="java"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>{
+    test(<span class="keyword">new</span> PlaceholderResolver() {
+        <span class="function"><span class="keyword">public</span> String <span class="title">resolvePlaceholder</span><span class="params">()</span> </span>{
+            print();
+        }
+    })
+}
+</code></pre>
+<p>所以在调用resolvePPlaceholder方法时会调用print方法。这样使用函数接口替代匿名内部类，可以是代码更加简洁。但要注意的是print方法要和resolvePlaceholder方法的参数列表、返回参数一致，方法名可以不一致。</p>
 
       
     </div>
@@ -559,9 +530,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HTTPS协议/" rel="tag"># HTTPS协议</a>
-          
-            <a href="/tags/SSL证书/" rel="tag"># SSL证书</a>
+            <a href="/tags/spring/" rel="tag"># spring</a>
           
         </div>
       
@@ -574,8 +543,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/24/error-与-exception的区别/" rel="next" title="error 与 exception的区别">
-                <i class="fa fa-chevron-left"></i> error 与 exception的区别
+              <a href="/2019/09/01/Ant风格/" rel="next" title="Ant风格">
+                <i class="fa fa-chevron-left"></i> Ant风格
               </a>
             
           </div>
@@ -583,10 +552,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/26/计算机常见英语单词翻译/" rel="prev" title="计算机常见英语单词翻译">
-                计算机常见英语单词翻译 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -800,7 +765,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#阿里云服务器Nginx环境下配置SSL证书"><span class="nav-number">1.</span> <span class="nav-text">阿里云服务器Nginx环境下配置SSL证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS的认识"><span class="nav-number">1.1.</span> <span class="nav-text">HTTPS的认识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：下载SSL证书"><span class="nav-number">1.2.</span> <span class="nav-text">第一步：下载SSL证书</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进入域名的云解析控制台"><span class="nav-number">1.2.1.</span> <span class="nav-text">进入域名的云解析控制台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#申请Symantec-DV-SSL证书"><span class="nav-number">1.2.2.</span> <span class="nav-text">申请Symantec DV SSL证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#填写验证信息"><span class="nav-number">1.2.3.</span> <span class="nav-text">填写验证信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载证书"><span class="nav-number">1.2.4.</span> <span class="nav-text">下载证书</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：配置Nginx"><span class="nav-number">1.3.</span> <span class="nav-text">第二步：配置Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将证书上传服务器"><span class="nav-number">1.3.1.</span> <span class="nav-text">将证书上传服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改nginx-conf文件"><span class="nav-number">1.3.2.</span> <span class="nav-text">修改nginx.conf文件</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">2.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>
