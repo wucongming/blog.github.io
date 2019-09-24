@@ -96,32 +96,27 @@
 
 
 
-  <meta name="description" content="阿里云服务器Nginx环境下配置SSL证书HTTPS的认识###   HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  &amp;#8194;&amp;#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1">
-<meta name="keywords" content="HTTPS协议,SSL证书">
+  <meta name="description" content="前言 现实生活中，许多事务的处理步骤是固定的，但是每步详细的处理方法可能不尽相同。    例如：我们在外面回家时就要经历两个步骤。  第一步：买车票 第二步：坐车  假如我们不使用抽象方法模式写一个乘坐火车（Train）和乘坐大巴（bu）回家的流程： 123456789101112131415161718/** * 坐大巴回家 */public class GoHomeByBus &amp;#123;">
+<meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阿里云环境下配置Nginx的SSL证书">
-<meta property="og:url" content="http://www.butong.live/2019/04/04/阿里云环境下配置Nginx的SSL证书/index.html">
+<meta property="og:title" content="抽象方法模式">
+<meta property="og:url" content="http://www.butong.live/2019/09/24/抽象方法模式/index.html">
 <meta property="og:site_name" content="Wu">
-<meta property="og:description" content="阿里云服务器Nginx环境下配置SSL证书HTTPS的认识###   HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  &amp;#8194;&amp;#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1">
+<meta property="og:description" content="前言 现实生活中，许多事务的处理步骤是固定的，但是每步详细的处理方法可能不尽相同。    例如：我们在外面回家时就要经历两个步骤。  第一步：买车票 第二步：坐车  假如我们不使用抽象方法模式写一个乘坐火车（Train）和乘坐大巴（bu）回家的流程： 123456789101112131415161718/** * 坐大巴回家 */public class GoHomeByBus &amp;#123;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041349_337.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041401_326.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041404_248.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041408_734.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041411_993.png">
-<meta property="og:image" content="http://ppf89if8g.bkt.clouddn.com/201904041413_941.png">
-<meta property="og:updated_time" content="2019-04-04T08:29:10.910Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/33340562/65492160-06878d00-dee3-11e9-8ff1-481eb29ee860.png">
+<meta property="og:updated_time" content="2019-09-24T07:58:09.965Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阿里云环境下配置Nginx的SSL证书">
-<meta name="twitter:description" content="阿里云服务器Nginx环境下配置SSL证书HTTPS的认识###   HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  &amp;#8194;&amp;#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1">
-<meta name="twitter:image" content="http://ppf89if8g.bkt.clouddn.com/201904041349_337.png">
+<meta name="twitter:title" content="抽象方法模式">
+<meta name="twitter:description" content="前言 现实生活中，许多事务的处理步骤是固定的，但是每步详细的处理方法可能不尽相同。    例如：我们在外面回家时就要经历两个步骤。  第一步：买车票 第二步：坐车  假如我们不使用抽象方法模式写一个乘坐火车（Train）和乘坐大巴（bu）回家的流程： 123456789101112131415161718/** * 坐大巴回家 */public class GoHomeByBus &amp;#123;">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/33340562/65492160-06878d00-dee3-11e9-8ff1-481eb29ee860.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.butong.live/2019/04/04/阿里云环境下配置Nginx的SSL证书/">
+  <link rel="canonical" href="http://www.butong.live/2019/09/24/抽象方法模式/">
 
 
 
@@ -131,7 +126,7 @@
   };
 </script>
 
-  <title>阿里云环境下配置Nginx的SSL证书 | Wu</title>
+  <title>抽象方法模式 | Wu</title>
   
 
 
@@ -357,7 +352,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.butong.live/2019/04/04/阿里云环境下配置Nginx的SSL证书/">
+    <link itemprop="mainEntityOfPage" href="http://www.butong.live/2019/09/24/抽象方法模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tony">
@@ -374,7 +369,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">阿里云环境下配置Nginx的SSL证书
+          <h1 class="post-title" itemprop="name headline">抽象方法模式
 
               
             
@@ -400,7 +395,7 @@
                 
               
 
-              <time title="创建时间：2019-04-04 15:24:48 / 修改时间：16:29:10" itemprop="dateCreated datePublished" datetime="2019-04-04T15:24:48+08:00">2019-04-04</time>
+              <time title="创建时间：2019-09-24 15:57:24 / 修改时间：15:58:09" itemprop="dateCreated datePublished" datetime="2019-09-24T15:57:24+08:00">2019-09-24</time>
             
 
             
@@ -422,7 +417,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
 
                 
                 
@@ -441,8 +436,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/04/阿里云环境下配置Nginx的SSL证书/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/04/04/阿里云环境下配置Nginx的SSL证书/" itemprop="commentCount"></span>
+                <a href="/2019/09/24/抽象方法模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/09/24/抽象方法模式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -470,43 +465,39 @@
       
 
       
-        <h1 id="阿里云服务器Nginx环境下配置SSL证书"><a href="#阿里云服务器Nginx环境下配置SSL证书" class="headerlink" title="阿里云服务器Nginx环境下配置SSL证书"></a><center>阿里云服务器Nginx环境下配置SSL证书</center></h1><h2 id="HTTPS的认识"><a href="#HTTPS的认识" class="headerlink" title="HTTPS的认识"></a>HTTPS的认识</h2><p>### </p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>现实生活中，许多事务的处理步骤是固定的，但是每步详细的处理方法可能不尽相同。  </p>
+</blockquote>
+<p>例如：我们在外面回家时就要经历两个步骤。</p>
+<ul>
+<li>第一步：买车票</li>
+<li>第二步：坐车</li>
+</ul>
+<p>假如我们不使用抽象方法模式写一个乘坐火车（Train）和乘坐大巴（bu）回家的流程：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 坐大巴回家</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GoHomeByBus</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">buyTicket</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"去汽车站买汽车票"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sitCar</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"去汽车站坐车"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">goHome</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        buyTicket();</span><br><span class="line">        sitCar();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 坐火车回家</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GoHomeByTrain</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">buyTicket</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"去火车站买火车票"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sitCar</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"去火车站坐车"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">goHome</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        buyTicket();</span><br><span class="line">        sitCar();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
+<p>冗余问题</p>
 </blockquote>
-<p>&#8194;&#8194;一般我们的服务器默认使用http协议，而https协议则需要自己配置协议，所以当在浏览器输入栏输入域名前加https时，会显示无法访问（如图1-1所示)。所以本次我将记录下在阿里云服务器Nginx环境下配置https协议过程。如在其他云运行商，亦可参考。<br><a id="more"></a></p>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041349_337.png" alt="图1-1  没配置ssl证书时https访问无效"></p>
-<h2 id="第一步：下载SSL证书"><a href="#第一步：下载SSL证书" class="headerlink" title="第一步：下载SSL证书"></a>第一步：下载SSL证书</h2><p><br></p>
+<p>会发现我们在两种回家的类中都写了<code>goHome</code>方法，而且由于回家的流程一样，所以该方法的内容都一样，如果还需要添加其他的回家方式，就会造成了更多冗余。</p>
 <blockquote>
-<p>SSL证书分为收费版和免费的，作为一个土豆丝，我只能申请免费版的ssl证书，为期一年，但是可以无限申请。至于在哪里下呢。请按如下步骤。</p>
+<p>解决冗余</p>
 </blockquote>
-<h3 id="进入域名的云解析控制台"><a href="#进入域名的云解析控制台" class="headerlink" title="进入域名的云解析控制台"></a>进入域名的云解析控制台</h3><blockquote>
-<p>（当然，前提是咱们有个域名）界面如图（2-1）所示<br> 在你要配置SSL证书的那一项点击旁边的更多，然后又一个SSL证书按钮（如图2-2），点击它。</p>
-</blockquote>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041401_326.png" alt="图2-1  云解析控制台"><br><img src="http://ppf89if8g.bkt.clouddn.com/201904041404_248.png" alt="图2-2"></p>
-<h3 id="申请Symantec-DV-SSL证书"><a href="#申请Symantec-DV-SSL证书" class="headerlink" title="申请Symantec DV SSL证书"></a>申请Symantec DV SSL证书</h3><blockquote>
-<p>在阿里云平台中该证书是免费的，但是期限只有一年，一年后过期可再来申请。<br>如图2-3填写要申请的域名，刚开始我输入*想为所有二级域名配置ssl证书，但是发现申请的按钮是灰的。后来发现输入www则没事，输入别的应该也可以吧，大家可以试试。</p>
-</blockquote>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041408_734.png" alt="图2-3"></p>
-<h3 id="填写验证信息"><a href="#填写验证信息" class="headerlink" title="填写验证信息"></a>填写验证信息</h3><blockquote>
-<p>大家在这里可能会遇见图2-4这种错误，但是大家不要方。<br>刚开始我也遇见了，后来发现他是在域名解析规则中添加了一个主机记录为_dnsauth的解析规则。<br>而域名解析规则更新到dns服务器上要等一会儿，所以大家乘这个机会喝杯茶，等下点击验证就ojbk。</p>
-</blockquote>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041411_993.png" alt="图2-4"></p>
-<h3 id="下载证书"><a href="#下载证书" class="headerlink" title="下载证书"></a>下载证书</h3><blockquote>
-<p>上一步验证成功后，就会跳转到SSL证书下载页面（如图2-5）。大家根据自己的需求下载对应的证书就可以了，我是要配置Nginx的SSL证书所以这里我选择了Nginx版的。到此第一阶段就结束了。</p>
-</blockquote>
-<p><img src="http://ppf89if8g.bkt.clouddn.com/201904041413_941.png" alt="图2-5"></p>
-<h2 id="第二步：配置Nginx"><a href="#第二步：配置Nginx" class="headerlink" title="第二步：配置Nginx"></a>第二步：配置Nginx</h2><h3 id="将证书上传服务器"><a href="#将证书上传服务器" class="headerlink" title="将证书上传服务器"></a>将证书上传服务器</h3><blockquote>
-<p>我先将下载的压缩包解压开，然后里面会有一个pem和key文件。然后通过scp命令（命令如下）将该软件上传到服务器的Nginx配置文件夹中的一个文件夹(SSL文件夹，这个文件夹是我自己建的，大家可以上传到自己喜欢的目录中)</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp -r 2020586_www.butong.live.key 2020586_www.butong.live.pem root@www.butong.live:/etc/nginx/ssl</span><br><span class="line">//格式</span><br><span class="line">scp -r 文件[ 文件] 用户名@域名或ip:/上传到的文件夹</span><br></pre></td></tr></table></figure>
-<h3 id="修改nginx-conf文件"><a href="#修改nginx-conf文件" class="headerlink" title="修改nginx.conf文件"></a>修改nginx.conf文件</h3><blockquote>
-<p>在server中添加以下几行代码（以下代码可与原来的配置http代码共存，所以无需删除之前http的配置）<br>然后保存退出运行 nginx -s reload命令重启Nginx即可。 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 443 ssl;</span><br><span class="line">    ssl on;</span><br><span class="line">    ssl_certificate ssl/2020586_www.butong.live.pem; # 你解压开的文件放在的目录</span><br><span class="line">    ssl_certificate_key ssl/2020586_www.butong.live.key; # 你解压开的文件放在的目录</span><br><span class="line">    ssl_session_timeout 5m;</span><br><span class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line">    、、、 # 后面的保持原来的配置文件不变即可</span><br></pre></td></tr></table></figure>
+<p>所以我们可以提取一个GoHome类，将goHome方法写在GoHome类中，然后让描述不同回家方式的类继承GoHome，那么就很好解决了冗余的问题。</p>
+<p>因为我们要将goHome方法写在GoHome类中，而goHome调用的方法在GoHome类中不存在，所以我们也要将其调用的方法上升到GoHome类中。而这几个方法是与回家方式相关的，所以将它们声明为abstract方法，让子类去实现。</p>
 <blockquote>
-<p>以上就是在阿里云环境下配置Nginx的ssl证书的完整过程。</p>
+<p>UML图</p>
 </blockquote>
+<p><img src="https://user-images.githubusercontent.com/33340562/65492160-06878d00-dee3-11e9-8ff1-481eb29ee860.png" alt="image"></p>
+<blockquote>
+<p>具体代码</p>
+</blockquote>
+<p>回家抽象类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">GoHome</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 买车票</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">buyTicket</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 坐车回家</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">sitCar</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">goGome</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        buyTicket();</span><br><span class="line">        sitCar();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>坐火车回家类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GoHomeByTrain</span> <span class="keyword">extends</span> <span class="title">GoHome</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">buyTicket</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"去火车站买火车票"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sitCar</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"去火车站坐车"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>坐大巴回家类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GoHomeByBus</span> <span class="keyword">extends</span> <span class="title">GoHome</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">buyTicket</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"去汽车站买汽车票"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sitCar</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"去汽车站坐车"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>上面提出一个GoHome基类的实现方式就是利用抽象方法模式，抽象方法模式的核心思想就是将一件事的固定处理步骤的实现提取到基类中（如goHome方法），然后子类继承积累，并且子类只需要实现各个步骤的处理方法。</p>
 
       
     </div>
@@ -559,9 +550,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HTTPS协议/" rel="tag"># HTTPS协议</a>
-          
-            <a href="/tags/SSL证书/" rel="tag"># SSL证书</a>
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
           
         </div>
       
@@ -574,8 +563,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/24/error-与-exception的区别/" rel="next" title="error 与 exception的区别">
-                <i class="fa fa-chevron-left"></i> error 与 exception的区别
+              <a href="/2019/09/06/有趣的函数接口/" rel="next" title="有趣的函数接口">
+                <i class="fa fa-chevron-left"></i> 有趣的函数接口
               </a>
             
           </div>
@@ -583,10 +572,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/26/计算机常见英语单词翻译/" rel="prev" title="计算机常见英语单词翻译">
-                计算机常见英语单词翻译 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -804,7 +789,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#阿里云服务器Nginx环境下配置SSL证书"><span class="nav-number">1.</span> <span class="nav-text">阿里云服务器Nginx环境下配置SSL证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS的认识"><span class="nav-number">1.1.</span> <span class="nav-text">HTTPS的认识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：下载SSL证书"><span class="nav-number">1.2.</span> <span class="nav-text">第一步：下载SSL证书</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进入域名的云解析控制台"><span class="nav-number">1.2.1.</span> <span class="nav-text">进入域名的云解析控制台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#申请Symantec-DV-SSL证书"><span class="nav-number">1.2.2.</span> <span class="nav-text">申请Symantec DV SSL证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#填写验证信息"><span class="nav-number">1.2.3.</span> <span class="nav-text">填写验证信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载证书"><span class="nav-number">1.2.4.</span> <span class="nav-text">下载证书</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：配置Nginx"><span class="nav-number">1.3.</span> <span class="nav-text">第二步：配置Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将证书上传服务器"><span class="nav-number">1.3.1.</span> <span class="nav-text">将证书上传服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改nginx-conf文件"><span class="nav-number">1.3.2.</span> <span class="nav-text">修改nginx.conf文件</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
