@@ -106,7 +106,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://user-images.githubusercontent.com/33340562/65507845-64c36880-df01-11e9-876b-1cc2d07fa862.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/33340562/65508361-a0aafd80-df02-11e9-9763-e2e423b9ab76.png">
-<meta property="og:updated_time" content="2019-09-24T11:43:16.649Z">
+<meta property="og:updated_time" content="2019-09-24T12:49:38.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工厂模式">
 <meta name="twitter:description" content="前言 假设系统中存在一个对象A被频繁的创建。如果某一天，需求发生变化，我们要重新改变对象A的创建的时候，发现A在几十个甚至上百个java文件中创建了。我们该怎么办？一个一个修改吗？  当我们遇见这种经常使用的对象时，就该想想是否是要用到工厂模式了。为了少加班做无用功，让我们看看工厂模式是怎么解决这种问题的。">
@@ -244,7 +244,7 @@
       
     
 
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">12</span></a>
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">13</span></a>
 
   </li>
         
@@ -263,7 +263,7 @@
       
     
 
-    <a href="/categories/index.html" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+    <a href="/categories/index.html" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">9</span></a>
 
   </li>
         
@@ -282,7 +282,7 @@
       
     
 
-    <a href="/tags/index.html" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">10</span></a>
+    <a href="/tags/index.html" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">12</span></a>
 
   </li>
         
@@ -396,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2019-09-24 19:42:11 / 修改时间：19:43:16" itemprop="dateCreated datePublished" datetime="2019-09-24T19:42:11+08:00">2019-09-24</time>
+              <time title="创建时间：2019-09-24 19:42:11 / 修改时间：20:49:38" itemprop="dateCreated datePublished" datetime="2019-09-24T19:42:11+08:00">2019-09-24</time>
             
 
             
@@ -491,6 +491,19 @@
 <p><img src="https://user-images.githubusercontent.com/33340562/65508361-a0aafd80-df02-11e9-9763-e2e423b9ab76.png" alt="image"></p>
 <p>修改如下</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PhoneFactory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Phone <span class="title">createPhone</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Phone(<span class="number">10</span>, <span class="number">15</span>, <span class="string">"黑色"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>问题</p>
+</blockquote>
+<p>但是使用简单工厂模式有几个缺点：</p>
+<ul>
+<li>不符合<strong>开闭原则</strong>。</li>
+</ul>
+<p>当我们需要添加新的类由工厂创建的时候，我们需要修改原来的PhoneFactory类。</p>
+<ul>
+<li>臃肿</li>
+</ul>
+<p>当PhoneFactory类中加入了大量的创建对象方法后，PhoneFactory会变得及其臃肿。</p>
+
       
     </div>
 
@@ -566,6 +579,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/16/concurrent包源码阅读开篇/" rel="prev" title="concurrent包源码阅读开篇">
+                concurrent包源码阅读开篇 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -643,7 +660,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -672,7 +689,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -705,7 +724,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
