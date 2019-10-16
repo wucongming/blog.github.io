@@ -106,7 +106,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://user-images.githubusercontent.com/33340562/66917186-7f47b800-f04f-11e9-936e-f5c7291c781e.PNG">
 <meta property="og:image" content="https://user-images.githubusercontent.com/33340562/66920422-d3ee3180-f055-11e9-800e-4cf2a8ffee1d.png">
-<meta property="og:updated_time" content="2019-10-16T13:45:42.008Z">
+<meta property="og:updated_time" content="2019-10-16T13:47:04.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="concurrent包源码阅读开篇">
 <meta name="twitter:description" content="前言前段时间认识了一个从事深度学习方向的博士学长，这个学长帮导师写一个项目临时要用java做开发。学长由于不太会java就问了我一个并发框架的问题，可是我这个声称是学java的却回答不上来。顿时觉得有种没学过java的感觉，为了以后不会发生这种尴尬，遂决心阅读concurrent包中的源码，并以此系列作为笔记。 并发面临的问题并发中常遇见的问题有原子性问题、可见性问题。其中由于jvm对代码的优化还">
@@ -396,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2019-10-16 21:44:53 / 修改时间：21:45:42" itemprop="dateCreated datePublished" datetime="2019-10-16T21:44:53+08:00">2019-10-16</time>
+              <time title="创建时间：2019-10-16 21:44:53 / 修改时间：21:47:04" itemprop="dateCreated datePublished" datetime="2019-10-16T21:44:53+08:00">2019-10-16</time>
             
 
             
@@ -468,6 +468,7 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间认识了一个从事深度学习方向的博士学长，这个学长帮导师写一个项目临时要用java做开发。学长由于不太会java就问了我一个并发框架的问题，可是我这个声称是学java的却回答不上来。顿时觉得有种没学过java的感觉，为了以后不会发生这种尴尬，遂决心阅读concurrent包中的源码，并以此系列作为笔记。</p>
 <h2 id="并发面临的问题"><a href="#并发面临的问题" class="headerlink" title="并发面临的问题"></a>并发面临的问题</h2><p>并发中常遇见的问题有原子性问题、可见性问题。其中由于jvm对代码的优化还带来了有序性问题。</p>
+<a id="more"></a>
 <h2 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h2><p>现代电脑处理器基本有多个内核，而每个内核上可以跑一个线程，所以电脑可以实现真正的并行运算。而两个并行运算的线程难免有所交集处理了一个变量。就如下面的情况，这样线程A得到的值最后竟然是0。有时候出现这种情况是致命性的，所以为了避免这种情况发送我们要确保对变量a进行处理和赋值的过程是原子性的，不能被中断。</p>
 <p><img src="https://user-images.githubusercontent.com/33340562/66917186-7f47b800-f04f-11e9-936e-f5c7291c781e.PNG" alt="捕获"></p>
 <p>在java中如果要实现原子性可以对操作进行加锁，例如使用<code>synchronized</code>和<code>Lock</code>。同过这些锁，可以使一个代码块或者对象只能被一个线程使用，其他线程只能等使用者用完。</p>

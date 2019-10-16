@@ -392,7 +392,7 @@
                 
               
 
-              <time title="创建时间：2019-10-16 21:44:53 / 修改时间：21:45:42" itemprop="dateCreated datePublished" datetime="2019-10-16T21:44:53+08:00">2019-10-16</time>
+              <time title="创建时间：2019-10-16 21:44:53 / 修改时间：21:47:04" itemprop="dateCreated datePublished" datetime="2019-10-16T21:44:53+08:00">2019-10-16</time>
             
 
             
@@ -450,21 +450,17 @@
 
       
         
-          
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间认识了一个从事深度学习方向的博士学长，这个学长帮导师写一个项目临时要用java做开发。学长由于不太会java就问了我一个并发框架的问题，可是我这个声称是学java的却回答不上来。顿时觉得有种没学过java的感觉，为了以后不会发生这种尴尬，遂决心阅读concurrent包中的源码，并以此系列作为笔记。</p>
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间认识了一个从事深度学习方向的博士学长，这个学长帮导师写一个项目临时要用java做开发。学长由于不太会java就问了我一个并发框架的问题，可是我这个声称是学java的却回答不上来。顿时觉得有种没学过java的感觉，为了以后不会发生这种尴尬，遂决心阅读concurrent包中的源码，并以此系列作为笔记。</p>
 <h2 id="并发面临的问题"><a href="#并发面临的问题" class="headerlink" title="并发面临的问题"></a>并发面临的问题</h2><p>并发中常遇见的问题有原子性问题、可见性问题。其中由于jvm对代码的优化还带来了有序性问题。</p>
-<h2 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h2><p>现代电脑处理器基本有多个内核，而每个内核上可以跑一个线程，所以电脑可以实现真正的并行运算。而两个并行运算的线程难免有所交集处理了一个变量。就如下面的情况，这样线程A得到的值最后竟然是0。有时候出现这种情况是致命性的，所以为了避免这种情况发送我们要确保对变量a进行处理和赋值的过程是原子性的，不能被中断。</p>
-<p><img src="https://user-images.githubusercontent.com/33340562/66917186-7f47b800-f04f-11e9-936e-f5c7291c781e.PNG" alt="捕获"></p>
-<p>在java中如果要实现原子性可以对操作进行加锁，例如使用<code>synchronized</code>和<code>Lock</code>。同过这些锁，可以使一个代码块或者对象只能被一个线程使用，其他线程只能等使用者用完。</p>
-<h2 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h2><p>在java的线程内存模型中，线程会共享本进程分配得到的内存。而每个线程会有属于自己的工作内存（工作内存线程之间不共享），他们会把一些共享变量拷贝到自己的工作内存。对共享变量进行操作时，会首先对自己工作内存进行操作，所以线程a<code>看不到</code>线程b对共享变量的操作，除非将线程b的工作内存刷新到主内存中，线程a才能看到（什么时候刷新我不太清楚，知道的大佬可以教教我）。</p>
-<p><img src="https://user-images.githubusercontent.com/33340562/66920422-d3ee3180-f055-11e9-800e-4cf2a8ffee1d.png" alt="image"></p>
-<p>正是因为线程a可能看不到线程b对变量的改变，就产生了变量的可见性问题。<br>例如可以执行如下代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">while</span>(flag) &#123;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                System.out.println(Thread.currentThread() + <span class="string">"中的循环结束了"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="string">"检测Flag的线程"</span>).start();</span><br><span class="line">        Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">        flag = <span class="keyword">false</span>;</span><br><span class="line">        System.out.println(<span class="string">"flag的值为"</span> + flag);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>解决共享变量的可见性问题就是使用volatile。具体详情可以参考<a href="https://www.cnblogs.com/monkeysayhi/p/7654460.html" target="_blank" rel="noopener">https://www.cnblogs.com/monkeysayhi/p/7654460.html</a><br>可以将class文件反编译成汇编语言进行验证。</p>
-<blockquote>
-<p>下期，将会写读并发包源码的笔记</p>
-</blockquote>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/10/16/concurrent包源码阅读开篇/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
