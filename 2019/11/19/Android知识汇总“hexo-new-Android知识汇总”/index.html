@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="第一章JDK全称：Java Development Toolkit（Java语言开发工具包）。其中包含java虚拟机、java工具以及一些java基础类库。 Android SDK全程：Android Software Developmen Kit（安卓软件开发工具箱）。其提供了在windows/linux/mac平台开发安卓应用的开发组件，包含了在Android平台开发移动应用的各种工具集（例如">
+<meta name="keywords" content="android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android知识汇总“ hexo new Android知识汇总”">
+<meta property="og:url" content="http://www.butong.live/2019/11/19/Android知识汇总“hexo-new-Android知识汇总”/index.html">
+<meta property="og:site_name" content="Wu">
+<meta property="og:description" content="第一章JDK全称：Java Development Toolkit（Java语言开发工具包）。其中包含java虚拟机、java工具以及一些java基础类库。 Android SDK全程：Android Software Developmen Kit（安卓软件开发工具箱）。其提供了在windows/linux/mac平台开发安卓应用的开发组件，包含了在Android平台开发移动应用的各种工具集（例如">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://user-images.githubusercontent.com/33340562/68528497-5e147780-032e-11ea-98a6-d9a522c5355c.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/33340562/68528497-5e147780-032e-11ea-98a6-d9a522c5355c.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/33340562/68528524-ea269f00-032e-11ea-937f-96ddd3abfe86.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/33340562/68528571-82248880-032f-11ea-9cde-01e9d30c6037.png">
+<meta property="og:image" content="https://www.2cto.com/uploadfile/Collfiles/20161017/201610170925041558.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3515789-fd974f027cb827be.png?imageMogr2/auto-orient/strip|imageView2/2/w/389/format/webp">
+<meta property="og:image" content="https://user-images.githubusercontent.com/33340562/68567727-b796b680-0494-11ea-8031-20c951fdcf6d.png">
+<meta property="og:image" content="https://i.bmp.ovh/imgs/2019/11/a0063a9cc387e9ac.png">
+<meta property="og:image" content="https://i.bmp.ovh/imgs/2019/11/1209a69ea0d3651f.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/33340562/69007131-c093f600-0974-11ea-9482-e98259f249d7.png">
+<meta property="og:updated_time" content="2019-11-19T02:34:16.249Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android知识汇总“ hexo new Android知识汇总”">
+<meta name="twitter:description" content="第一章JDK全称：Java Development Toolkit（Java语言开发工具包）。其中包含java虚拟机、java工具以及一些java基础类库。 Android SDK全程：Android Software Developmen Kit（安卓软件开发工具箱）。其提供了在windows/linux/mac平台开发安卓应用的开发组件，包含了在Android平台开发移动应用的各种工具集（例如">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/33340562/68528497-5e147780-032e-11ea-98a6-d9a522c5355c.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.butong.live/2019/11/19/Android知识汇总“hexo-new-Android知识汇总”/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Android知识汇总“ hexo new Android知识汇总” | Wu</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">15</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/index.html" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">10</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/index.html" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">13</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.butong.live/2019/11/19/Android知识汇总“hexo-new-Android知识汇总”/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tony">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android知识汇总“ hexo new Android知识汇总”
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-19 10:33:26 / 修改时间：10:34:16" itemprop="dateCreated datePublished" datetime="2019-11-19T10:33:26+08:00">2019-11-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/11/19/Android知识汇总“hexo-new-Android知识汇总”/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/11/19/Android知识汇总“hexo-new-Android知识汇总”/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>全称：Java Development Toolkit（Java语言开发工具包）。其中包含java虚拟机、java工具以及一些java基础类库。</p>
+<h3 id="Android-SDK"><a href="#Android-SDK" class="headerlink" title="Android SDK"></a>Android SDK</h3><p>全程：Android Software Developmen Kit（安卓软件开发工具箱）。其提供了在windows/linux/mac平台开发安卓应用的开发组件，包含了在Android平台开发移动应用的各种工具集（例如：调试、打包等工具）</p>
+<h3 id="HAXM"><a href="#HAXM" class="headerlink" title="HAXM"></a>HAXM</h3><p>intel的硬件加速执行管理器，利用intel的虚拟化技术加速Android开发的硬件辅助虚拟引擎。</p>
+<h3 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h3><p>是一个项目构建工具，支持自动下载依赖包以及打包项目</p>
+<a id="more"></a>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="项目结构目录"><a href="#项目结构目录" class="headerlink" title="项目结构目录"></a>项目结构目录</h3><table>
+<thead>
+<tr>
+<th>文件</th>
+<th>用户</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.gradle</td>
+<td>Gradle编译系统</td>
+</tr>
+<tr>
+<td>.idea</td>
+<td>Android Studio IDE配置文件</td>
+</tr>
+<tr>
+<td>app</td>
+<td>应用源码核心文件夹</td>
+</tr>
+<tr>
+<td>build</td>
+<td>代码编译后生成的文件存放目录</td>
+</tr>
+<tr>
+<td>gradle</td>
+<td>wrapper的jar和配置文件在的地方</td>
+</tr>
+<tr>
+<td>.gitinore</td>
+<td>git的ignore配置文件</td>
+</tr>
+<tr>
+<td>build.gradle</td>
+<td>gradle编译的相关配置文件</td>
+</tr>
+<tr>
+<td>gradle.propperties</td>
+<td>gradle相关的全局属性配置</td>
+</tr>
+<tr>
+<td>gradlew</td>
+<td>gradle wrapper的可执行文件</td>
+</tr>
+<tr>
+<td>gradlew.bat</td>
+<td>windows下gradle wrapper的可执行文件</td>
+</tr>
+<tr>
+<td>Hello World.iml</td>
+<td>项目的配置文件</td>
+</tr>
+<tr>
+<td>local.properties</td>
+<td>本地属性配置（key设置，Android sdk位置等属性</td>
+</tr>
+<tr>
+<td>settings.gradle</td>
+<td>gradle的设置脚本</td>
+</tr>
+<tr>
+<td>External.Librari</td>
+<td>引用库</td>
+</tr>
+</tbody>
+</table>
+<h3 id="辅助工具"><a href="#辅助工具" class="headerlink" title="辅助工具"></a>辅助工具</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aapt</td>
+<td>产生R文件，以使资源文件能够在代码中引用</td>
+</tr>
+<tr>
+<td>Navigation Editor</td>
+<td>可视化管理Android 应用的结构和布局文件</td>
+</tr>
+<tr>
+<td>adb</td>
+<td>查询设备信息和数据库，安装程序到设备，端口映射以及移动文件等管理操作</td>
+</tr>
+<tr>
+<td>Android 工具</td>
+<td>创建和管理android virtual devices</td>
+</tr>
+<tr>
+<td>Android层级阅览器</td>
+<td>显示出各组件的布局及其联系</td>
+</tr>
+<tr>
+<td>Draw Nine-patch</td>
+<td>让开发设计能够拉伸的png图</td>
+</tr>
+<tr>
+<td>DDMS（Dalvik Debug Monitor Service）</td>
+<td>查看和管理运行在设备上的进程和线程、查看堆栈数据、连接到进程进行调试</td>
+</tr>
+<tr>
+<td>Sqlite3</td>
+<td>Android内置数据库</td>
+</tr>
+<tr>
+<td>TraceView</td>
+<td>将安卓程序产生的日志转化为图形化的分析师图</td>
+</tr>
+<tr>
+<td>logcat</td>
+<td>日志输出工具</td>
+</tr>
+</tbody>
+</table>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h3><p>Linux内核（主要是一些驱动） —&gt; 系统运行库（媒体库、webkit、ssl等） —&gt; 应用程序框架（活动管理器、电话管理器、资源管理器等） —&gt; 应用程序（联系人、电话、浏览器等）</p>
+<h3 id="应用程序编译原理和运行原理"><a href="#应用程序编译原理和运行原理" class="headerlink" title="应用程序编译原理和运行原理"></a>应用程序编译原理和运行原理</h3><blockquote>
+<p>首先将资源编译为.java -&gt; 将.java编译为平台无关的.class -&gt; 将散乱的.class集合为虚拟机可加载可运行的.dex文件 -&gt; 将.dex与资源打包为未签名的apk -&gt; 将未签名的apk签名 -&gt; 将签名的apk优化</p>
+</blockquote>
+<ul>
+<li>使用aapt工具将Application Resource编译为R.java和Compiled Resource。</li>
+<li>使用aidl工具将.aidl文件编译为.java文件</li>
+<li>使用javac将.java文件编译为.class文件</li>
+<li>使用dx.bat文件将所有.class文件和第三方库集合成DVM可加载的.dex文件</li>
+<li>apkbuilder将Compiled Resource、.dex以及其它的Resource打包成apk</li>
+<li>使用jarsigned将打包的apk签名（签名需要Debug Keystore or Release Keystore)形成signed APK</li>
+<li>使用zipalign优化打包的apk</li>
+</ul>
+<h3 id="activity四种加载模式"><a href="#activity四种加载模式" class="headerlink" title="activity四种加载模式"></a>activity四种加载模式</h3><ul>
+<li>standard （默认）</li>
+<li>singleTop</li>
+<li>singleTask</li>
+<li>singleInstance</li>
+</ul>
+<blockquote>
+<p>下面我们用ABCDB的activity调用顺序模拟活动启动顺序</p>
+</blockquote>
+<h4 id="standard模式"><a href="#standard模式" class="headerlink" title="standard模式"></a>standard模式</h4><p><img src="https://user-images.githubusercontent.com/33340562/68528497-5e147780-032e-11ea-98a6-d9a522c5355c.png" alt="image"></p>
+<p>最终：栈中有5个activity实例<br>解释：standard每次startActivity都会创建一个新的activity实例</p>
+<h4 id="singleTop模式"><a href="#singleTop模式" class="headerlink" title="singleTop模式"></a>singleTop模式</h4><blockquote>
+<p>example 1</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/33340562/68528497-5e147780-032e-11ea-98a6-d9a522c5355c.png" alt="image"></p>
+<blockquote>
+<p>example 2<br>input: abcdd</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/33340562/68528524-ea269f00-032e-11ea-937f-96ddd3abfe86.png" alt="image"></p>
+<p>最终：栈中有4个activity实例<br>解释：singleTop当当前栈顶的activity是我们要启动的新activity时，直接使用栈顶的activity（调用其onNewIntent()），不会创建新的activity。</p>
+<h4 id="singleTask模式"><a href="#singleTask模式" class="headerlink" title="singleTask模式"></a>singleTask模式</h4><p><img src="https://user-images.githubusercontent.com/33340562/68528571-82248880-032f-11ea-9cde-01e9d30c6037.png" alt="image"></p>
+<p>最终：栈中有2个activity实例<br>解释：singleTask模式，如果栈中存在要启动的activity时，直接将该activity上的activity弹出，直到该activity位于栈顶。如果栈中不存在，则创建新的activity。</p>
+<h4 id="singleInstance模式"><a href="#singleInstance模式" class="headerlink" title="singleInstance模式"></a>singleInstance模式</h4><blockquote>
+<p>示例解释<br>FirstActivity、ThirdActivity是standard模式，SecondActivity是singleInstance模式<br>首先启动FirstActivity然后启动secondActivity，再启动ThirdActivity。然后按返回键</p>
+</blockquote>
+<p><img src="https://www.2cto.com/uploadfile/Collfiles/20161017/201610170925041558.png" alt="image"></p>
+<p>最终：启动ThirdActivity后，总共有三个activity实例，两个任务栈。<br>解释：singleInstance模式时，会新建一个栈存放该activity。并且该栈只能存放该activity。所以在启动SecondActivity时，会将该activity放到返回栈B中。在启动ThirdActivity时，由于当前是显示SecondActivity，而栈B只能存放SecondActivity，所以启动ThirdActivity会重新回到栈A中。</p>
+<h3 id="service"><a href="#service" class="headerlink" title="service"></a>service</h3><blockquote>
+<p>service是一个可以在后台执行长时间运行操作而不提供用户界面的应用组件。<br>服务像Activity那样也是默认运行在主线程中，如果有耗时任务还是要在服务内部创建子线程，不然程序会GG。  </p>
+</blockquote>
+<h4 id="应用案例："><a href="#应用案例：" class="headerlink" title="应用案例："></a>应用案例：</h4><ul>
+<li>用于处理网络事务（下载文件）</li>
+<li>播放音乐（音乐播放器）</li>
+<li>执行IO操作</li>
+</ul>
+<h4 id="服务的生命周期"><a href="#服务的生命周期" class="headerlink" title="服务的生命周期"></a>服务的生命周期</h4><blockquote>
+<p>通过startService启动的服务  </p>
+</blockquote>
+<p>该服务需要在AndroidManifest.xml中配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">android:name</span>=<span class="string">".MyService"</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">service</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>第一次调用startService(Intent)时： 执行onCreate() –&gt; onStartCommand() –&gt; service running  </li>
+<li><p>第二次调用startService(Intent)时：执行onStartCommand() –&gt; service running</p>
+</li>
+<li><p>关闭可以调用activity中的stopService和service中的stopSelf：执行onDestory() –&gt; service shut down</p>
+</li>
+</ul>
+<p>onCreate() –&gt; onStartCommand() –&gt; service running –&gt;onDestory() –&gt; service shut down</p>
+<blockquote>
+<p>通过bindService启动的服务</p>
+</blockquote>
+<ul>
+<li>调用bindService时：执行onCreate() –&gt; onBind()(只会执行一次) –&gt; service running  </li>
+<li>unbindService: activity退出时一定要调用unbindService，当所有</li>
+</ul>
+<p>onCreate() –&gt; onBind() –&gt; service running –&gt; onUnbind() –&gt; onDestory() –&gt; service shut down</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3515789-fd974f027cb827be.png?imageMogr2/auto-orient/strip|imageView2/2/w/389/format/webp" alt="image"></p>
+<h3 id="BroadCastReceiver"><a href="#BroadCastReceiver" class="headerlink" title="BroadCastReceiver"></a>BroadCastReceiver</h3><p>分类：常驻型广播、非常驻型广播</p>
+<h4 id="非常驻型广播"><a href="#非常驻型广播" class="headerlink" title="非常驻型广播"></a>非常驻型广播</h4><blockquote>
+<p>生命周期由开发者决定，通常在activity的onCreate方法中注册广播接收者，在onDestory中销毁广播。</p>
+</blockquote>
+<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><blockquote>
+<p>第一步：定义接收者</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NReceiver</span> <span class="keyword">extends</span> <span class="title">BroadcastReceiver</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onReceive</span><span class="params">(Context context, Intent intent)</span> </span>&#123;</span><br><span class="line">        Toast.makeText(context, <span class="string">"onReceiv"</span>, <span class="number">1</span>).show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>第二步：注册</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reigster</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    NReceiver receiver = <span class="keyword">new</span> NReceiver();</span><br><span class="line">    <span class="comment">// 定义广播接收的消息</span></span><br><span class="line">    IntentFilter filter = <span class="keyword">new</span> IntentFilter(<span class="string">"android.provider.Telephony.SMS_RECEIVED"</span>);</span><br><span class="line">    registerReceiver(receiver,filter);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>最后：销毁广播</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onDestroy();</span><br><span class="line">    unregisterReceiver(receiver);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="常驻型广播"><a href="#常驻型广播" class="headerlink" title="常驻型广播"></a>常驻型广播</h4><blockquote>
+<p>常驻型广播即使应用退出，也能接收到广播。</p>
+</blockquote>
+<h5 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h5><blockquote>
+<p>第一步</p>
+</blockquote>
+<p>同上定义实现广播类</p>
+<blockquote>
+<p>第二步：在AndroidManifest中注册</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">receiver</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">".receiver.NReceiver"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:enabled</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:exported</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">intent-filter</span> &gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.provider.Telephony.SMS_RECEIVED"</span>&gt;</span><span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="发送广播"><a href="#发送广播" class="headerlink" title="发送广播"></a>发送广播</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Intent i = <span class="keyword">new</span> Intent(<span class="string">"com.hmkcode.android.USER_ACTION"</span>);</span><br><span class="line">sendBroadcast(i);</span><br></pre></td></tr></table></figure>
+<h3 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h3><blockquote>
+<p>实现不同的应用程序之间共享数据</p>
+</blockquote>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="activity"><a href="#activity" class="headerlink" title="activity"></a>activity</h3><blockquote>
+<p>activity的四种状态：</p>
+</blockquote>
+<ul>
+<li>Active/Running<br>activity处于屏幕的最前端，用户可以看到，并且与之交互。</li>
+<li><p>Paused<br>用户依然能看到activity，但是用户不能与之交互。因为一个活动被另一个非全屏的活动覆盖住。例如：Dialog。处于这种状态的activity依然是活的，依然维护其相关信息，系统只会在内存极低的时候才将其回收。</p>
+</li>
+<li><p>Stop<br>已经完全不能看见该界面，但系统依然维持其相关内部状态。在手机内存被征用时，系统经常会将其回收。</p>
+</li>
+<li>Killed<br>activity已被系统回收或者还未启动</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/33340562/68567727-b796b680-0494-11ea-8031-20c951fdcf6d.png" alt="image"></p>
+<p><img src="https://i.bmp.ovh/imgs/2019/11/a0063a9cc387e9ac.png" alt></p>
+<blockquote>
+<p>其他两个回调函数</p>
+</blockquote>
+<ul>
+<li>onSaveInstanceState()<br>Android系统在资源不足而终止activity之前调用，用以保存activity的 状态信息</li>
+<li>onRestoreInstanceState()<br>恢复onSaveInstanceState保存的状态信息，在onStart与onResume之间使用。</li>
+</ul>
+<blockquote>
+<p>两个activity跳转时，调用顺序：  </p>
+</blockquote>
+<p>系统将先后执行Activity1的onPause()–Activity2的onCreate()–<br>onStart()–onResume()–Activity1的onSaveInstance-State() –onStop()<br>系统在执行完Activity1的onPause()<br>之后，先将Activity2显示出来，再执行Activity1的onStop()操作，在执行完Activity1的onPause()后，<br>Activity1便不显示在屏幕的最前端了。</p>
+<blockquote>
+<p>由Activity1-&gt;Activity2-&gt;Back:  </p>
+</blockquote>
+<p>系统先后执行了Activity2的onPause()–Activity1的onRestart()–<br>onStart()–onResume()–Activity2的onStop()–onDestory()</p>
+<h3 id="fragment"><a href="#fragment" class="headerlink" title="fragment"></a>fragment</h3><h4 id="出现背景"><a href="#出现背景" class="headerlink" title="出现背景"></a>出现背景</h4><p>在Android3.0之前版本，app通常是运行在小屏幕的设备上。随后为了支持大屏幕的平板电脑能够显示更多的信息，引进了fragment布局。一个activity中的不同fragment有各自的生命周期，因此能够专心处理各自的业务逻辑，而且共显示在一块屏幕上。</p>
+<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>Fragment是依赖于Activity存在的，所以生命周期与Activiy也有所相似。</p>
+<blockquote>
+<p>activity的onCreate对应Fragment:  </p>
+</blockquote>
+<p>onAttach() –&gt; onCreate() –&gt; onCreateView() –&gt; onActivityCreated()</p>
+<blockquote>
+<p>activity的onDestory()对应Fragment:  </p>
+</blockquote>
+<p>onDestoryView() –&gt; onDestory() –&gt; onDetach()</p>
+<p><img src="https://i.bmp.ovh/imgs/2019/11/1209a69ea0d3651f.png" alt></p>
+<h3 id="Intent属性"><a href="#Intent属性" class="headerlink" title="Intent属性"></a>Intent属性</h3><blockquote>
+<p>Intent的Action（动作）  </p>
+</blockquote>
+<p>Action属性用于描述Intent要完成的动作</p>
+<blockquote>
+<p>Intent的Data（数据）  </p>
+</blockquote>
+<p>Data属性是执行动作的URI和MIME类型，可以传参</p>
+<blockquote>
+<p>Intent的Category（分类）</p>
+</blockquote>
+<p>Category属性指明一个执行Action的分类</p>
+<table>
+<thead>
+<tr>
+<th>Category属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CATEGORY_DEFAULT</td>
+<td>默认的执行方式，按照普通Activity的执行方式执行</td>
+</tr>
+<tr>
+<td>CATEGORY_HOME</td>
+<td>该组件为Home Activity</td>
+</tr>
+<tr>
+<td>CATEGORY_LAUNCHER</td>
+<td>优先级最高的Activity，通常为入口ACTION_MAIN配合使用</td>
+</tr>
+<tr>
+<td>CATEGORY_BROWSABLE</td>
+<td>可以使用浏览器启动</td>
+</tr>
+<tr>
+<td>CATEGORY_GADGET</td>
+<td>可以内嵌到另外的Activity中</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Intent的Component（组件）  </p>
+</blockquote>
+<p>Component属性用于指明Intent目标组件的类名称。<br>通常Android会根据Intent中包含的其他属性的信息，进行查<br>找一个与之匹配的目标组件。但是，如果指定了Component这个属性，Intent则会<br>直接根据组件名查找到相应的组件。</p>
+<p>使用时例如：intent.setClass(Activity1.this, Activity2.class)<br>这里就是指明了哪个组件</p>
+<blockquote>
+<p>Intent的Extra  </p>
+</blockquote>
+<p>Extra属性用于添加一些附加信息</p>
+<h4 id="三种跳转方式"><a href="#三种跳转方式" class="headerlink" title="三种跳转方式"></a>三种跳转方式</h4><ul>
+<li>不带参的跳转</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = <span class="keyword">new</span> Intent();</span><br><span class="line">intent.setClass(Activity1.<span class="keyword">this</span>, Activity2.class);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>带参的跳转</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = <span class="keyword">new</span> Intent();</span><br><span class="line">Bundle bundle = <span class="keyword">new</span> Bundle();</span><br><span class="line">bundle.putString(<span class="string">"Name"</span>, <span class="string">"Kate"</span>);</span><br><span class="line">intent.putExtras(bundle);</span><br><span class="line">intent.setClass(Activity1.<span class="keyword">this</span>, Activity2.class);</span><br><span class="line">startActivity(intent);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//获取参数</span></span><br><span class="line"></span><br><span class="line">Bundle bundle = <span class="keyword">this</span>.getIntent().getExtras();</span><br><span class="line">String name = bundle.getString(<span class="string">"Name"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>带返回值的跳转</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一个页面</span></span><br><span class="line">Intent intent = <span class="keyword">new</span> Intent();</span><br><span class="line">intent.setClass(Activity1.<span class="keyword">this</span>, Activity2.class);</span><br><span class="line"><span class="keyword">this</span>.startActivityForResult(intent, <span class="number">0</span>); <span class="comment">//第二个参数用于识别第二个页面传回来的值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onActivityResult</span><span class="params">(<span class="keyword">int</span> requestCode, <span class="keyword">int</span> resultCode, Intent data)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//此处接收返回的参数</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二个页面</span></span><br><span class="line">Intent intent = <span class="keyword">new</span> Intent();</span><br><span class="line">Bundle bundle = <span class="keyword">new</span> Bundle();</span><br><span class="line">bundle.putString(<span class="string">"Name"</span>, <span class="string">"Kate"</span>);</span><br><span class="line">intent.putExtras(bundle);</span><br><span class="line">intent.setClass(Activity2.<span class="keyword">this</span>, Activity1.class);</span><br><span class="line">setResult(RESULT_OK, intent);</span><br><span class="line">finish();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><h3 id="控件与容器"><a href="#控件与容器" class="headerlink" title="控件与容器"></a>控件与容器</h3><ul>
+<li>控件<br>eg: Button、TextView等，继承于View，其不能包含其他View</li>
+<li>容器<br>eg: LinearLayout等，继承于ViewGroup，其能包含其他控件以及容器</li>
+</ul>
+<h3 id="给控件添加监听事件的四种方式"><a href="#给控件添加监听事件的四种方式" class="headerlink" title="给控件添加监听事件的四种方式"></a>给控件添加监听事件的四种方式</h3><ul>
+<li><p>匿名内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">button.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//响应事件</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义事件监听类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">button.setOnClickListener(<span class="keyword">new</span> MyListener());</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">MyListener</span> <span class="keyword">implements</span> <span class="title">View</span>.<span class="title">OnClickListener</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//响应事件</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Activity实现OnClickListener接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> <span class="keyword">implements</span> <span class="title">View</span>.<span class="title">OnClickListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    button.setOnClickListener(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">switch</span>(v.getId()) &#123;</span><br><span class="line">            <span class="keyword">case</span> R.id.btn:</span><br><span class="line">            <span class="comment">//响应事件</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在布局文件中添加onClick属性</p>
+</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:onClick</span>=<span class="string">"btnClick"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">btnClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//响应事件</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h4><blockquote>
+<p>LinearLayout  </p>
+</blockquote>
+<p>名称：线性布局<br>特点：组件垂直摆放、水平摆放<br>注意：当设置的方向放满后，再添加控件就在屏幕之外，无法看见  </p>
+<blockquote>
+<p>RelativeLayout  </p>
+</blockquote>
+<p>名称：相对布局<br>特点：利用控件之间的相对位置关系来布局<br>注意：只能与在兄弟组件和父组件进行相对布局  </p>
+<blockquote>
+<p>FrameLayout  </p>
+</blockquote>
+<p>名称：帧布局<br>特点：该容器中的控件没有上线左右关系，组件之间层叠放置<br>注意：容器中最后写的控件在容器的最顶层，使用android:bringToFront=”true|false”可将控件提到最顶层  </p>
+<blockquote>
+<p>TableLayout  </p>
+</blockquote>
+<p>名称：表格布局<br>特点：使用TableRow配合TableLayout，让TableLayout生成多个列  </p>
+<blockquote>
+<p>AbsoluteLayout  </p>
+</blockquote>
+<p>名称：绝对布局<br>特点：以屏幕左上角坐标为原点（0，0），控件位置以坐标的形式存在<br>确定：屏幕兼容性不好  </p>
+<h3 id="资源文件夹"><a href="#资源文件夹" class="headerlink" title="资源文件夹"></a>资源文件夹</h3><table>
+<thead>
+<tr>
+<th>目录</th>
+<th>资源类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>res/animator</td>
+<td>存放property animation的xml文件(属性动画，作用于View的属性)</td>
+</tr>
+<tr>
+<td>res/anim</td>
+<td>存放补间动画或逐帧动画的xml文件(作用与View的视觉，不改变属性值)</td>
+</tr>
+<tr>
+<td>res/raw</td>
+<td>存放直接复制到设备中的任意文件，它们无需编译，添加到你的应用程序编译产生的压缩文件中。要使用这些文件，可以调用Resources.openRawResource(),参数是R.raw.somefilename</td>
+</tr>
+<tr>
+<td>res/drawable</td>
+<td>存放能转化为绘制文件的位图或者定义了绘制资源的XML文件</td>
+</tr>
+<tr>
+<td>res/color</td>
+<td>存放定义了颜色列表资源的XML文件</td>
+</tr>
+<tr>
+<td>res/layout</td>
+<td>存放定义了用户界面布局的XML文件</td>
+</tr>
+<tr>
+<td>res/menu</td>
+<td>存放定义了应用程序菜单资源的XML文件</td>
+</tr>
+<tr>
+<td>res/values</td>
+<td>存放定义了多种类型资源的XML文件(eg:字符串、数据、颜色、尺寸、样式)</td>
+</tr>
+<tr>
+<td>res/xml</td>
+<td>存放任意的xml文件，使用Resources.getXML()读取</td>
+</tr>
+</tbody>
+</table>
+<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p>service 的基本介绍，前面介绍过</p>
+<h2 id="第七章"><a href="#第七章" class="headerlink" title="第七章"></a>第七章</h2><blockquote>
+<p>发送广播的三种方法  </p>
+</blockquote>
+<ul>
+<li>Context.sendBroadcast  </li>
+<li>Context.sendOrderedBroadcast  </li>
+<li>Context.sendStickyBroadcast  </li>
+</ul>
+<blockquote>
+<p>区别  </p>
+</blockquote>
+<ul>
+<li><p>sendBroadcast或sendStickyBroadcast发送出去的Intent，对于所有满足条件的BroadcastReceiver都会执行其onReceive方法，但是多个BroadcastReceiver的onReceive的执行顺序无法保证。  </p>
+</li>
+<li><p>sendOrderedBroadcastReceiver发出去的Intent，会根据注册时IntentFilter设计的优先级执行onReceive方法，但是同优先级的BroadcastReceive执行顺序无法保证。</p>
+</li>
+<li><p>sendStickyBroadcast主要特点是，Intent发送后会一直存在，并在以后注册相的Receiver时，会直接将这个Intent返回给刚注册的Receiver。</p>
+</li>
+</ul>
+<h3 id="发送广播-1"><a href="#发送广播-1" class="headerlink" title="发送广播"></a>发送广播</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String Intent_Action = com.android.BroadcastReceiverDemo;</span><br><span class="line">Intent intent = <span class="keyword">new</span> Intent(Intent_Action);</span><br><span class="line">Intent.putExtra(<span class="string">"参数"</span>，<span class="string">"参数值"</span>)；</span><br><span class="line">SendBroadcast(intent)；</span><br></pre></td></tr></table></figure>
+<h3 id="接收广播"><a href="#接收广播" class="headerlink" title="接收广播"></a>接收广播</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//onReceive()方法必须5秒内执行完事件</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBroadcastReceiver</span> <span class="keyword">extends</span> <span class="title">BroadcastReceiver</span> </span>&#123;</span><br><span class="line">    String Itent_Action = com.android.BroadcastReceiverDemo;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onReceive</span><span class="params">(Context context, Intent intent)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(intent.getAction().equals(Intent_Action)) &#123;</span><br><span class="line">            <span class="comment">//相应的处理</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="注册广播"><a href="#注册广播" class="headerlink" title="注册广播"></a>注册广播</h3><blockquote>
+<p>代码注册广播 </p>
+</blockquote>
+<p>非常驻型广播：广播生命周期由程序决定</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">MyBroadcastReceiver receiver = <span class="keyword">new</span> MyBroadcastReceiver();</span><br><span class="line"><span class="comment">//实例化过滤器并设置要过滤的广播</span></span><br><span class="line">IntentFilter intentFilter = <span class="keyword">new</span> IntentFilter(<span class="string">"Intent_Action"</span>);</span><br><span class="line"><span class="comment">//注册广播</span></span><br><span class="line">registerReceiver(receiver，intentFilter);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>AndroidManifext.xml中注册广播  </p>
+</blockquote>
+<p>常驻型广播：程序关闭后，有信息广播过来，程序也会调用。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">receiver</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span> = <span class="string">"MyBroadcastReceiver"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span> = <span class="string">" com.androidbook.MyBroadcastReceiver"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="广播其他分类"><a href="#广播其他分类" class="headerlink" title="广播其他分类"></a>广播其他分类</h3><blockquote>
+<p>广播又分为有序广播和正常广播  </p>
+</blockquote>
+<p>有序广播的优先级范围 -1024 至 1024。数字越大，优先级越大。动态注册的广播优先级总是高于静态注册的广播</p>
+<h2 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a>第八章</h2><p>安卓的四种数据存储：SharedPreference、SQLite、File和ContentProvider。</p>
+<ul>
+<li><p>SharedPreference：一种常用的数据存储方式，其本质是基于XML文件存储键值对，通常用来存储一些简单的配置信息。</p>
+</li>
+<li><p>SQLite：一个轻量级数据库，执行SQL语句。</p>
+</li>
+<li><p>文件存储：常用于存储数据量比较大的文件，缺点是更新数据困难。</p>
+</li>
+<li><p>ContentProvider：用于安卓系统中应用程序之间数据共享的一种方式。</p>
+</li>
+</ul>
+<h3 id="SharedPreference"><a href="#SharedPreference" class="headerlink" title="SharedPreference"></a>SharedPreference</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SharedPreferences sharedPreferences = getSharedPreferences(<span class="string">"type"</span>,</span><br><span class="line">Context.MODE_APPEND);</span><br><span class="line">Editor editor = sharedPreferences.edit();</span><br><span class="line"><span class="comment">// String字符串型</span></span><br><span class="line">editor.putString(<span class="string">"String"</span>, <span class="string">"words"</span>);</span><br><span class="line"><span class="comment">// Boolean布尔型</span></span><br><span class="line">editor.putBoolean(<span class="string">"Boolean"</span>, <span class="keyword">true</span>);</span><br><span class="line"><span class="comment">// Integer整型</span></span><br><span class="line">editor.putInt(<span class="string">"Integer"</span>, <span class="number">1</span>);</span><br><span class="line"><span class="comment">// Long长整型</span></span><br><span class="line">editor.putLong(<span class="string">"Long"</span>, <span class="number">1000000</span>);</span><br><span class="line"><span class="comment">// Float浮点数型</span></span><br><span class="line">editor.putFloat(<span class="string">"Float"</span>, <span class="number">3.5f</span>);</span><br><span class="line">editor.commit();</span><br></pre></td></tr></table></figure>
+<h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h3><h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul>
+<li><p>也不支持一些标准的SQL功能，特别是外键约束（FOREIGNKEY constrains），嵌套<br>transcaction和RIGHTOUTERJOIN和FULLOUTERJOIN，迓有一些ALTERTABLE功能。  </p>
+</li>
+<li><p>和其他数据库最大的丌同就是对数据类型的支持</p>
+</li>
+</ul>
+<p>存储类型:  </p>
+<table>
+<thead>
+<tr>
+<th>存储类</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NULL</td>
+<td>值是一个NULL值</td>
+</tr>
+<tr>
+<td>INTEGER</td>
+<td>值是一个带符合的整数，根据值的大小存在1、2、3、4、6或8字节中。</td>
+</tr>
+<tr>
+<td>REAL</td>
+<td>值是一个浮点值，存储为8字节的IEEE浮点数字。</td>
+</tr>
+<tr>
+<td>TEXT</td>
+<td>值是一个文本字符串，使用数据库编码存储。</td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td>值是一个blob数据，完全根据它的输入存储。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="亲和类型"><a href="#亲和类型" class="headerlink" title="亲和类型"></a>亲和类型</h4><p>亲和类型：TEXT、NUMERIC、REAL、INTEGER、NONE<br>作用: 为了和其他DBMS以及SQL兼容，在create table中指定列类型时，SQLite会根据字段声明的类型，为其选择一种亲缘类型。  </p>
+<p>创建的数据库文件位于/data- /data/\<package name>/databases/&lt;数据库名&gt;.db  </package></p>
+<h3 id="ContentProvider-1"><a href="#ContentProvider-1" class="headerlink" title="ContentProvider"></a>ContentProvider</h3><p>作用： ContentProvider是Android平台中，在丌同应用程序乊间实现数据共享的唯一机制。  </p>
+<h2 id="第九章"><a href="#第九章" class="headerlink" title="第九章"></a>第九章</h2><h3 id="socket与http的区别"><a href="#socket与http的区别" class="headerlink" title="socket与http的区别"></a>socket与http的区别</h3><ul>
+<li>socket不是协议是一个接口，http是一个协议</li>
+<li>http对应于应用层，socket是对TCP/IP协议的封装，对应于传输层  </li>
+<li>http是短连接、socket是长连接</li>
+</ul>
+<h3 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h3><blockquote>
+<p>用以表示服务器http响应状态</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>客户端应当继续发送请求</td>
+</tr>
+</tbody>
+</table>
+<p>| 200 | 成功 |<br>| 300 | 重定向 |<br>| 400 | 请求错误 |<br>| 403 | 拒绝访问 |<br>| 404 | 找不到资源 |<br>| 500 | 服务器错误 |</p>
+<h3 id="socket三次握手"><a href="#socket三次握手" class="headerlink" title="socket三次握手"></a>socket三次握手</h3><p>确保双方都能成功连接到彼此</p>
+<p>第一次握手：判断A到B方向是否通的<br>第二次握手：确定A到B方向是通的，并开始判断B到A方向是否连通<br>第三次握手：确定B到A方向是连通的  </p>
+<h3 id="socket四次挥手"><a href="#socket四次挥手" class="headerlink" title="socket四次挥手"></a>socket四次挥手</h3><p>保证断开连接时，传输数据的完整性  </p>
+<p>第一次挥手：A告诉B断开<br>第二次挥手：B告诉A收到断开请求，但是可能数据还没传输完，所以等待数据传输完，所以告诉A等下。<br>第三次挥手：B告诉A，可以断开了<br>第四次挥手：A告诉B，好的  </p>
+<h3 id="SAX"><a href="#SAX" class="headerlink" title="SAX"></a>SAX</h3><p>全称：Simple API for XML。既是一种接口，也是一种软件包.它是xml解析的替代方式。</p>
+<h2 id="第十章"><a href="#第十章" class="headerlink" title="第十章"></a>第十章</h2><h3 id="进程与线程的区别"><a href="#进程与线程的区别" class="headerlink" title="进程与线程的区别"></a>进程与线程的区别</h3><ul>
+<li>根本区别：进程是操作系统资源分配的基本单位，线程是任务调度和执行的基本单位。  </li>
+<li>进程之间的切换有很大消耗，而线程之间的切换开销小。  </li>
+<li>操作系统包括多个进程，而一个进程包含多个线程。  </li>
+</ul>
+<h4 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h4><p>定义：进程是一个具有一定独立功能的程序关于某个数据集合的一次运行活动。它是操作系统动态执行的基本单元。  </p>
+<p>进程间的通信：使用Binder实现  </p>
+<h4 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h4><p>定义：线程是进程中的一个实体，将程序的执行和资源分开，一个进程可拥有多个线程。</p>
+<h3 id="Android的线程模型"><a href="#Android的线程模型" class="headerlink" title="Android的线程模型"></a>Android的线程模型</h3><h4 id="单线程模型"><a href="#单线程模型" class="headerlink" title="单线程模型"></a>单线程模型</h4><p>一个进程中只能有一个线程在运行，剩下的线程必须等待当前的线程执行完再执行。</p>
+<h4 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h4><p>当多个线程访问一个类时，如果不考虑这些线程运行时的调度和交替执行，并且不需要额外的同步，这个类的行为仍然是正确的。那么称这个类是线程安全的。</p>
+<h3 id="Handler的基本概念"><a href="#Handler的基本概念" class="headerlink" title="Handler的基本概念"></a>Handler的基本概念</h3><p>定义：Handler类是Android系统为开发者封装的一个能异步处理消息的辅助类。</p>
+<h4 id="创建流程"><a href="#创建流程" class="headerlink" title="创建流程"></a>创建流程</h4><ul>
+<li><p>得到Looper对象，得到MessageQueue对象（Looper.prepare()方法内部完成这两件事）。</p>
+</li>
+<li><p>实例化Handler并复写handleMessage()方法，用来接收传递过来的消息，并作相应处理。</p>
+</li>
+<li><p>调用loop()方法死循环获得消息队列的变化，并分发消息，最终回调HandleMessage()。</p>
+</li>
+</ul>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ul>
+<li><p>在activity启动的过程中，主线程已经调用了Looper.prepare()和Looper.loop()方法，所以我们只需要实例化Handler。</p>
+</li>
+<li><p>在UI线程使用Handler h = new Handler();时，系统默认将Looper的对象和MessageQueue关联到UI线程。若加入非UI线程，系统不会调用Looper的prepare()方法</p>
+</li>
+</ul>
+<h3 id="AsyncTask"><a href="#AsyncTask" class="headerlink" title="AsyncTask"></a>AsyncTask</h3><table>
+<thead>
+<tr>
+<th>核心方法</th>
+<th>作用</th>
+<th>调用时刻</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>execute(Params …params)</td>
+<td>触发执行异步线程任务</td>
+<td>手动调用</td>
+<td>必须运行在主线程</td>
+</tr>
+<tr>
+<td>onPreExecute()</td>
+<td>执行线程任务前的操作(根据需求重写)</td>
+<td>执行execute前自动调用</td>
+<td>用于界面的初始化</td>
+</tr>
+<tr>
+<td>doInBackground(Params …params)</td>
+<td>执行任务（必须重写）</td>
+<td>执行onPreExecute后自动调用</td>
+<td>不能更改UI，可调用publishProgress()更新UI</td>
+</tr>
+<tr>
+<td>onProgressUpdate(Progress value)</td>
+<td>在主线程中更新任务执行的进度</td>
+<td>调用publishProgress()后，自动调用</td>
+<td>–</td>
+</tr>
+<tr>
+<td>onPostExecute(Result result)</td>
+<td>接收线程任务执行结果、将执行结果更新到UI组件</td>
+<td>线程任务结束时自动调用</td>
+<td>–</td>
+</tr>
+<tr>
+<td>onCancelled()</td>
+<td>将异步任务设置为取消状态</td>
+<td>异步任务被取消时自动调用</td>
+<td>该方法被调用后，onPostExecute就不会被调用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="第十二章"><a href="#第十二章" class="headerlink" title="第十二章"></a>第十二章</h2><h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><ul>
+<li>概念：<br>任何计算机系统都包含一个基本的程序集合  </li>
+<li>目的：<br>与硬件交互，管理所有的硬件资源<br>为用户程序提供一个良好的执行环境  </li>
+</ul>
+<h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><ul>
+<li>作用：<br>1：传递参数<br>2：保存函数调用时的上下文  </li>
+</ul>
+<p>堆栈：存放函数的参数值，局部变量的值等<br>常量区：字符串常量和其他常量的存储位置</p>
+<h3 id="用户态与内核态"><a href="#用户态与内核态" class="headerlink" title="用户态与内核态"></a>用户态与内核态</h3><p>区分用户态和内核态：  </p>
+<ul>
+<li>禁止用户程序和底层硬件直接打交道</li>
+<li>禁止用户程序访问任意的物理内存</li>
+</ul>
+<h3 id="中断与异常"><a href="#中断与异常" class="headerlink" title="中断与异常"></a>中断与异常</h3><ul>
+<li>中断：异步的，由硬件随机产生，在程序执行的任何时刻都有可能产生中断。</li>
+<li>异常：同步的，在指令执行时由CPU控制单元产生。</li>
+</ul>
+<h3 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h3><ul>
+<li>操作系统为用户态进程与硬件设备进行交互提供了一组接口</li>
+</ul>
+<h2 id="第十三章"><a href="#第十三章" class="headerlink" title="第十三章"></a>第十三章</h2><ul>
+<li><p>GNU：一个类似 Unix ,且为 自由软件 的完整的操作系统。其使用Linux内核</p>
+</li>
+<li><p>GCC：GNU Compiler Collection，符合ISO等标准的C编译器</p>
+</li>
+<li><p>Make：是一种代码维护工具，在使用GNU编译器开发大型应用时，往往要使用make管理项<br>目。</p>
+</li>
+<li><p>makefile：Makefile告诉make该做什么、怎么做</p>
+</li>
+</ul>
+<h2 id="第十四章"><a href="#第十四章" class="headerlink" title="第十四章"></a>第十四章</h2><h3 id="实模式"><a href="#实模式" class="headerlink" title="实模式"></a>实模式</h3><p>X86复位后工作在实模式下，该模式下CPU的寻址空间为1M。<br>CPU复位（reset）或加电（power on）的时候就是以实模式启动。<br>在实模式下，不能访问20位以上的地址线，也就是只能访问1M内存。所以用于加载操作系统，然后进入保护模式。</p>
+<h3 id="保护模式"><a href="#保护模式" class="headerlink" title="保护模式"></a>保护模式</h3><p>实模式下，程序员指定的地址就是物理地址。这样会带来程序的安全性问题。所以为了避免这个问题，提出了保护模式。保护进程地址空间。</p>
+<h3 id="Android的启动过程"><a href="#Android的启动过程" class="headerlink" title="Android的启动过程"></a>Android的启动过程</h3><ul>
+<li>Loader层进行Boot ROM 和 Boot Loader。</li>
+<li>内核层创建0号进程：idle(swapper)，运行在内核中，是唯一一个没有通过fork和kernel_thread产生的进程。常常称为交换进程。</li>
+<li>Native层创建init进程(1号进程)，而init进程是由idle通过kernel_thread创建的。它是系统中所有其他用户进程的祖先进程。Linux中所有的进程都是由init进程创建并运行的。在系统启动完后，init变为守护进程监视系统的其他进程。</li>
+<li>然后创建受精卵进程<br><img src="https://user-images.githubusercontent.com/33340562/69007131-c093f600-0974-11ea-9482-e98259f249d7.png" alt="image"></li>
+</ul>
+<h2 id="第十五章"><a href="#第十五章" class="headerlink" title="第十五章"></a>第十五章</h2><p>进程</p>
+<h3 id="进程描述符"><a href="#进程描述符" class="headerlink" title="进程描述符"></a>进程描述符</h3><p>使用进程描述符地址标识一个进程，每个进程的Process ID(PID)都放在进程描述符的pid域中。</p>
+<h4 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h4><p>do_fork -&gt; copy_process -&gt; alloc_pid</p>
+<ul>
+<li>fork 是 创建一个子进程，并把父进程的内存数据copy到子进程中。</li>
+<li>vfork是 创建一个子进程，并和父进程的内存数据share一起用。</li>
+</ul>
+<h4 id="内核线程与普通进程的差别"><a href="#内核线程与普通进程的差别" class="headerlink" title="内核线程与普通进程的差别"></a>内核线程与普通进程的差别</h4><ul>
+<li>每个内核线程执行一个单独指定的内核函数</li>
+<li>只运行在内核态</li>
+<li>只使用大于PAGE_OFFSET的线性地址空间</li>
+</ul>
+<h4 id="进程0"><a href="#进程0" class="headerlink" title="进程0"></a>进程0</h4><p>所有进程的祖先叫做进程0  </p>
+<p>在系统初始化阶段由start_kernel()函数从无到有手工创建<br>的一个内核线程<br> Init_task<br> Init_thread_union<br> 进程0最后的初始化工作创建init内核线程，此后运行cpu_idle，<br>成为idle进程  </p>
+<h4 id="进程1"><a href="#进程1" class="headerlink" title="进程1"></a>进程1</h4><p>又称为init进程<br>由进程0在start_kernel调用rest_init创建<br>init进程PID为1，当调度程序选择到init进程时，<br>init进程开始执行kernel_init ()函数</p>
+<h4 id="课堂测试"><a href="#课堂测试" class="headerlink" title="课堂测试"></a>课堂测试</h4><p>fork返回值为0，则当前进程为子进程<br>fork返回值非0，则当前进程为父进程，且返回的值为子进程的pid  </p>
+<blockquote>
+<p>调用fork创建一个子进程，然后让子进程和父进程分别输出<br>fork的返回值  </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">i = fork();</span><br><span class="line"><span class="keyword">if</span>(i &lt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"error in fork!"</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">1</span>);<span class="comment">//fork出错退出</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(i == <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"子进程返回%d"</span>, i);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    pprintf(<span class="string">"父进程返回%d"</span>, i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>连续3次调用fork， 然后让子进程和父进程分别输出fork的<br>返回值和各自的pid，说明一共创建了几个进程？画出进程<br>之间的创建关系（进程使用pid来标识）</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> pid1 = <span class="number">0</span>, pid2 = <span class="number">0</span>, pid3 = <span class="number">0</span>;</span><br><span class="line">pid1 = fork();</span><br><span class="line">pid2 = fork();</span><br><span class="line">pid3 = fork();</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"fork 返回值 pid1=%d，current process pid = %d"</span>, pid1, getPid());</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"fork 返回值 pid2=%d，current process pid = %d"</span>, pid2, getPid());</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"fork 返回值 pid3=%d，current process pid = %d"</span>, pid3, getPid());</span><br></pre></td></tr></table></figure>
+<p>总共创建7个进程</p>
+<h2 id="第十七章"><a href="#第十七章" class="headerlink" title="第十七章"></a>第十七章</h2><h3 id="NUMA"><a href="#NUMA" class="headerlink" title="NUMA"></a>NUMA</h3><p>名称：非统一内存访问架构<br>作用：物理内存划分为若干个node  </p>
+<h3 id="存储区"><a href="#存储区" class="headerlink" title="存储区"></a>存储区</h3><p>作用：为了解决页框由于自身物理地址的原因，不能被一些任务所使用的限制。Linux将物理内存划分为区。</p>
+<p>Linux将物理存储器分为4个区：<br>ZONE_DMA<br>ZONE_DMA32(未使用)<br>ZONE_NORMAL<br>ZONE_HIGHMEN</p>
+<p>ZONE_DMA和ZONE_NORMAL区：包含存储器的常规页，通过把它们映射到线性地址空间的3GB以上，内核就可以直接访问了。<br>ZONE_HIGHMEN区不能直接由内核访问。  </p>
+<h3 id="外部碎片"><a href="#外部碎片" class="headerlink" title="外部碎片"></a>外部碎片</h3><p>导致原因：频繁的请求和释放不同大小的一组连续页框，导致物理页框中分散许多小的空闲页框。  </p>
+<p>解决方法：</p>
+<ul>
+<li>利用MMU（内存管理单元）把一组非连续的物理空闲空间映射到连续的线性地址空间。</li>
+<li>用一种技术记录空闲连续页框的情况，以避免满足对小块的满足而将大块空闲块进行切割。</li>
+</ul>
+<h3 id="伙伴算法"><a href="#伙伴算法" class="headerlink" title="伙伴算法"></a>伙伴算法</h3><p>解决外部碎片  </p>
+<p>➢ 把所有空闲页框分组为10（Linux2.6.26为11）个块链<br>表，每个块链表分别包含大小为1，2，4，8，16，32<br>，64，128，256和512个连续的页框<br>➢ 每个块的第一个页框的物理地址是该块大小的整数倍<br>⚫例如：大小为16个页框的块，其起址是16×4KB的倍数</p>
+<p>伙伴算法对逻辑地址空间的页框进行管理，找到页框后，通过mem_map数组映射到页框对应的物理地址。</p>
+<h3 id="slab"><a href="#slab" class="headerlink" title="slab"></a>slab</h3><p>作用：内存分配机制，解决内部碎片  </p>
+<p>Slab 相当于内存池思想，且是为了解决内碎片而产生的，slab的核心思想是<br>以对象的观点管理内存。</p>
+<h3 id="缺页异常"><a href="#缺页异常" class="headerlink" title="缺页异常"></a>缺页异常</h3><p>内核只是通过mmap()调用  分配了一些线性地址空间给进程，并没有把实际的物理页框分配给进程。当通过线性地址空间区访问物理页框，而并没有物理页框对应这些线性地址空间时，就会引发缺页异常。</p>
+<p>中断：中断是指来自CPU执行指令以外的事件发生后，处理机暂停正在运行的程序，转去执行处理该事件的程序的过程。  </p>
+<p>异常：异常是指源自CPU执行指令内部的事件发生后，处理机暂停正在运行的程序，转去执行该事件的过程。  </p>
+<h4 id="中断上下文"><a href="#中断上下文" class="headerlink" title="中断上下文"></a>中断上下文</h4><p>中断上下文不同于进程上下文<br>中断或异常处理程序执行的代码不是一个进程<br>它是一个内核控制路径，代表了中断发生时正在执行的代码。</p>
+<p>中断分类：</p>
+<ul>
+<li>可屏蔽中断</li>
+<li>非屏蔽中断<br>只有几个特定的危急事件才引起非屏蔽中断。如硬件故障或者掉电</li>
+</ul>
+<p>异常分类：</p>
+<ul>
+<li>处理器探测异常<br>如：溢出、除0错</li>
+<li>编程异常<br>由编程者发出，通常称为‘软中断’。例如：系统调用。</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>觉得文章对您有帮助请我喝杯咖啡吧^_^</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="Tony 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/alipay.jpg" alt="Tony 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/android/" rel="tag"># android</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/19/AtomicXXX源码（一）/" rel="next" title="AtomicXXX源码（一）">
+                <i class="fa fa-chevron-left"></i> AtomicXXX源码（一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="Tony">
+            
+              <p class="site-author-name" itemprop="name">Tony</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/wucongming" title="GitHub &rarr; https://github.com/wucongming" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:2783214886@qq.com" title="邮箱 &rarr; mailto:2783214886@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>邮箱</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.yubajin.cn/" title="http://www.yubajin.cn/" rel="noopener" target="_blank">老Kin</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://newbeelity.cn/" title="http://newbeelity.cn/" rel="noopener" target="_blank">聂小尧</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JDK"><span class="nav-number">1.1.</span> <span class="nav-text">JDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-SDK"><span class="nav-number">1.2.</span> <span class="nav-text">Android SDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HAXM"><span class="nav-number">1.3.</span> <span class="nav-text">HAXM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradle"><span class="nav-number">1.4.</span> <span class="nav-text">Gradle</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目结构目录"><span class="nav-number">2.1.</span> <span class="nav-text">项目结构目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#辅助工具"><span class="nav-number">2.2.</span> <span class="nav-text">辅助工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#体系结构"><span class="nav-number">3.1.</span> <span class="nav-text">体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用程序编译原理和运行原理"><span class="nav-number">3.2.</span> <span class="nav-text">应用程序编译原理和运行原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#activity四种加载模式"><span class="nav-number">3.3.</span> <span class="nav-text">activity四种加载模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#standard模式"><span class="nav-number">3.3.1.</span> <span class="nav-text">standard模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#singleTop模式"><span class="nav-number">3.3.2.</span> <span class="nav-text">singleTop模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#singleTask模式"><span class="nav-number">3.3.3.</span> <span class="nav-text">singleTask模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#singleInstance模式"><span class="nav-number">3.3.4.</span> <span class="nav-text">singleInstance模式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service"><span class="nav-number">3.4.</span> <span class="nav-text">service</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用案例："><span class="nav-number">3.4.1.</span> <span class="nav-text">应用案例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#服务的生命周期"><span class="nav-number">3.4.2.</span> <span class="nav-text">服务的生命周期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BroadCastReceiver"><span class="nav-number">3.5.</span> <span class="nav-text">BroadCastReceiver</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#非常驻型广播"><span class="nav-number">3.5.1.</span> <span class="nav-text">非常驻型广播</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用"><span class="nav-number">3.5.1.1.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常驻型广播"><span class="nav-number">3.5.2.</span> <span class="nav-text">常驻型广播</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用-1"><span class="nav-number">3.5.2.1.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发送广播"><span class="nav-number">3.5.3.</span> <span class="nav-text">发送广播</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ContentProvider"><span class="nav-number">3.6.</span> <span class="nav-text">ContentProvider</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章"><span class="nav-number">4.</span> <span class="nav-text">第四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#activity"><span class="nav-number">4.1.</span> <span class="nav-text">activity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fragment"><span class="nav-number">4.2.</span> <span class="nav-text">fragment</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#出现背景"><span class="nav-number">4.2.1.</span> <span class="nav-text">出现背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期"><span class="nav-number">4.2.2.</span> <span class="nav-text">生命周期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Intent属性"><span class="nav-number">4.3.</span> <span class="nav-text">Intent属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#三种跳转方式"><span class="nav-number">4.3.1.</span> <span class="nav-text">三种跳转方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章"><span class="nav-number">5.</span> <span class="nav-text">第五章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#控件与容器"><span class="nav-number">5.1.</span> <span class="nav-text">控件与容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给控件添加监听事件的四种方式"><span class="nav-number">5.2.</span> <span class="nav-text">给控件添加监听事件的四种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Layout"><span class="nav-number">5.2.1.</span> <span class="nav-text">Layout</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源文件夹"><span class="nav-number">5.3.</span> <span class="nav-text">资源文件夹</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六章"><span class="nav-number">6.</span> <span class="nav-text">第六章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七章"><span class="nav-number">7.</span> <span class="nav-text">第七章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#发送广播-1"><span class="nav-number">7.1.</span> <span class="nav-text">发送广播</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接收广播"><span class="nav-number">7.2.</span> <span class="nav-text">接收广播</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册广播"><span class="nav-number">7.3.</span> <span class="nav-text">注册广播</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#广播其他分类"><span class="nav-number">7.4.</span> <span class="nav-text">广播其他分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八章"><span class="nav-number">8.</span> <span class="nav-text">第八章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SharedPreference"><span class="nav-number">8.1.</span> <span class="nav-text">SharedPreference</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQLite"><span class="nav-number">8.2.</span> <span class="nav-text">SQLite</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特点："><span class="nav-number">8.2.1.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#亲和类型"><span class="nav-number">8.2.2.</span> <span class="nav-text">亲和类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ContentProvider-1"><span class="nav-number">8.3.</span> <span class="nav-text">ContentProvider</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第九章"><span class="nav-number">9.</span> <span class="nav-text">第九章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#socket与http的区别"><span class="nav-number">9.1.</span> <span class="nav-text">socket与http的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http状态码"><span class="nav-number">9.2.</span> <span class="nav-text">http状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#socket三次握手"><span class="nav-number">9.3.</span> <span class="nav-text">socket三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#socket四次挥手"><span class="nav-number">9.4.</span> <span class="nav-text">socket四次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SAX"><span class="nav-number">9.5.</span> <span class="nav-text">SAX</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十章"><span class="nav-number">10.</span> <span class="nav-text">第十章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程与线程的区别"><span class="nav-number">10.1.</span> <span class="nav-text">进程与线程的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进程"><span class="nav-number">10.1.1.</span> <span class="nav-text">进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程"><span class="nav-number">10.1.2.</span> <span class="nav-text">线程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android的线程模型"><span class="nav-number">10.2.</span> <span class="nav-text">Android的线程模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单线程模型"><span class="nav-number">10.2.1.</span> <span class="nav-text">单线程模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程安全"><span class="nav-number">10.2.2.</span> <span class="nav-text">线程安全</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Handler的基本概念"><span class="nav-number">10.3.</span> <span class="nav-text">Handler的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建流程"><span class="nav-number">10.3.1.</span> <span class="nav-text">创建流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意："><span class="nav-number">10.3.2.</span> <span class="nav-text">注意：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AsyncTask"><span class="nav-number">10.4.</span> <span class="nav-text">AsyncTask</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十二章"><span class="nav-number">11.</span> <span class="nav-text">第十二章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作系统"><span class="nav-number">11.1.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆栈"><span class="nav-number">11.2.</span> <span class="nav-text">堆栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户态与内核态"><span class="nav-number">11.3.</span> <span class="nav-text">用户态与内核态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中断与异常"><span class="nav-number">11.4.</span> <span class="nav-text">中断与异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统调用"><span class="nav-number">11.5.</span> <span class="nav-text">系统调用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十三章"><span class="nav-number">12.</span> <span class="nav-text">第十三章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十四章"><span class="nav-number">13.</span> <span class="nav-text">第十四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实模式"><span class="nav-number">13.1.</span> <span class="nav-text">实模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保护模式"><span class="nav-number">13.2.</span> <span class="nav-text">保护模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android的启动过程"><span class="nav-number">13.3.</span> <span class="nav-text">Android的启动过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十五章"><span class="nav-number">14.</span> <span class="nav-text">第十五章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程描述符"><span class="nav-number">14.1.</span> <span class="nav-text">进程描述符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进程的创建"><span class="nav-number">14.1.1.</span> <span class="nav-text">进程的创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内核线程与普通进程的差别"><span class="nav-number">14.1.2.</span> <span class="nav-text">内核线程与普通进程的差别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程0"><span class="nav-number">14.1.3.</span> <span class="nav-text">进程0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程1"><span class="nav-number">14.1.4.</span> <span class="nav-text">进程1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#课堂测试"><span class="nav-number">14.1.5.</span> <span class="nav-text">课堂测试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十七章"><span class="nav-number">15.</span> <span class="nav-text">第十七章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NUMA"><span class="nav-number">15.1.</span> <span class="nav-text">NUMA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储区"><span class="nav-number">15.2.</span> <span class="nav-text">存储区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外部碎片"><span class="nav-number">15.3.</span> <span class="nav-text">外部碎片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伙伴算法"><span class="nav-number">15.4.</span> <span class="nav-text">伙伴算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slab"><span class="nav-number">15.5.</span> <span class="nav-text">slab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺页异常"><span class="nav-number">15.6.</span> <span class="nav-text">缺页异常</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#中断上下文"><span class="nav-number">15.6.1.</span> <span class="nav-text">中断上下文</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tony</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  
+    
+   
+   
+   
+   
+   <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+   <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+   
+       <script type="text/javascript">
+           var gitment = new Gitment({
+              id: window.location.pathname, 
+               owner: '',
+               repo: 'wucongming.github.io',
+               oauth: {
+                   client_id: '',
+                   client_secret: '',
+               }});
+           gitment.render('gitment-container');
+       </script>
+   
+
+  
+
+
+   
+   
+   
+   
+   <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+   <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+   
+       <script type="text/javascript">
+           var gitment = new Gitment({
+              id: window.location.pathname, 
+               owner: '',
+               repo: 'wucongming.github.io',
+               oauth: {
+                   client_id: '',
+                   client_secret: '',
+               }});
+           gitment.render('gitment-container');
+       </script>
+   
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
